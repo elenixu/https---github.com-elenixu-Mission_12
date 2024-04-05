@@ -1,11 +1,17 @@
-@import 'variables';
-@import 'mixins';
+@import '../components/Header/header.css';
+@import '../components/Footer/footer.css';
+@import '../components/Carousel/carrousel.css';
 
-@import './components/header.css';
-@import './components/footer.css';
-@import './components/carrousel.css';
+@import '../pages/Home/home.css';
+@import '../pages/Competences/competences.css';
+@import '../pages/Travaux/travaux.css';
+@import '../pages/Contact/contact.css';
 
-@import './pages/home.css';
-@import './pages/competences.css';
-@import './pages/travaux.css';
-@import './pages/contact.css';
+body {
+  background: var(--gray-900, #0c0c0d);
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}

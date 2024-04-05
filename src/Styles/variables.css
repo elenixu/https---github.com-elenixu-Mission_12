@@ -1,8 +1,0 @@
-body {
-  background: var(--gray-900, #0c0c0d);
-  max-width: 1400px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}/*# sourceMappingURL=variables.css.map */

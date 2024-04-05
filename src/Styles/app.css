@@ -1,10 +1,10 @@
-@import './components/header.css';
-@import './components/footer.css';
-@import './components/carrousel.css';
-@import './pages/home.css';
-@import './pages/competences.css';
-@import './pages/travaux.css';
-@import './pages/contact.css';
+@import '../components/Header/header.css';
+@import '../components/Footer/footer.css';
+@import '../components/Carousel/carrousel.css';
+@import '../pages/Home/home.css';
+@import '../pages/Competences/competences.css';
+@import '../pages/Travaux/travaux.css';
+@import '../pages/Contact/contact.css';
 body {
   background: var(--gray-900, #0c0c0d);
   max-width: 1400px;
@@ -12,22 +12,4 @@ body {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-}
-
-.gl-title {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: #c8c8c8;
-  font-size: 43px;
-}
-
-.gl-text {
-  font-family: Raleway;
-  font-style: normal;
-  color: var(--gray-400, #6f6f6f);
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 33px;
 }/*# sourceMappingURL=app.css.map */
