@@ -1,0 +1,15 @@
+body {
+  max-width: 1400px;
+}
+
+.cm-container-global {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.cm-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}

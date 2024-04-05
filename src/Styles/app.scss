@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/carrousel.css';
+
+@import './pages/home.css';
+@import './pages/competences.css';
+@import './pages/travaux.css';
+@import './pages/contact.css';

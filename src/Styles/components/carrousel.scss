@@ -1,0 +1,35 @@
+.carousel {
+  position: relative;
+
+  .carousel-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  button {
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+
+  .carousel-images {
+    display: flex;
+    overflow-x: hidden;
+    padding-left: 35px;
+    gap: 30px;
+
+    img {
+      width: 183.75px;
+      height: 186.667px;
+    }
+
+    img.active {
+      transform: translateX(0);
+    }
+  }
+}

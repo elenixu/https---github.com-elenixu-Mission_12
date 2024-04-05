@@ -1,0 +1,30 @@
+.carousel {
+  position: relative;
+}
+.carousel .carousel-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel button {
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+.carousel .carousel-images {
+  display: flex;
+  overflow-x: hidden;
+  padding-left: 35px;
+  gap: 30px;
+}
+.carousel .carousel-images img {
+  width: 183.75px;
+  height: 186.667px;
+}
+.carousel .carousel-images img.active {
+  transform: translateX(0);
+}/*# sourceMappingURL=carrousel.css.map */
