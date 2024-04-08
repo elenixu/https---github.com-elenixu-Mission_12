@@ -1,20 +1,46 @@
 import React from 'react'
-import Button from '../../components/Button'
+
 import '../../Styles/app.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 
 function Header() {
   return (
     <div className="h-global-container">
       <div className="h-links-container">
-        <div className="h-links-text">À propos</div>
-        <div className="h-links-text">Compétences</div>
-        <div className="h-links-text">Projets</div>
-        <div className="h-links-text">Contactez-moi</div>
-        <Button buttonText="Français" className="h-button">
-          <FontAwesomeIcon icon={faLanguage} />
-        </Button>
+        <a href="#about" className="h-links-text">
+          À propos
+        </a>
+        <a href="#skills" className="h-links-text">
+          Compétences
+        </a>
+        <a href="#projects" className="h-links-text">
+          Projets
+        </a>
+        <a href="#contact" className="h-links-text">
+          Contactez-moi
+        </a>
+      </div>
+
+      <div className="h-links-container-mobile">
+        <div className="h-button-container-mobile">
+          <a href="#about" className="h-links-text">
+            À propos
+          </a>
+        </div>
+        <div className="h-button-container-mobile">
+          <a href="#skills" className="h-links-text">
+            Compétences
+          </a>
+        </div>
+        <div className="h-button-container-mobile">
+          <a href="#projects" className="h-links-text">
+            Projets
+          </a>
+        </div>
+        <div className="h-button-container-mobile">
+          <a href="#contact" className="h-links-text">
+            Contactez-moi
+          </a>
+        </div>
       </div>
     </div>
   )

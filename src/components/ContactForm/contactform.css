@@ -1,0 +1,46 @@
+@media (min-width: 767.98px) {
+  .cf-container-email {
+    width: 350px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 21.875px;
+    background: #d9d9d9;
+    color: var(--gray-400, #6f6f6f);
+    font-family: Raleway;
+    font-size: 29.167px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .cf-container-message {
+    width: 600px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 21.875px;
+    background: #d9d9d9;
+    color: var(--gray-400, #6f6f6f);
+    font-family: Raleway;
+    font-size: 29.167px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .cf-container-message::placeholder {
+    color: var(--gray-400, #6f6f6f);
+    font-family: Raleway;
+    font-size: 29.167px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 10px;
+  }
+  .cf-container-email::placeholder {
+    color: var(--gray-400, #6f6f6f);
+    font-family: Raleway;
+    font-size: 29.167px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 10px;
+  }
+}/*# sourceMappingURL=contactform.css.map */

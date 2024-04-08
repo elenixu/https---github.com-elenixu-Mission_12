@@ -7,10 +7,14 @@ function Competences() {
     <div className="cm-container-global">
       <div className="cm-content">
         <div className="cm-container-info">
-          <div className="gl-title">Mes compétences</div>
+          <div id="skills" className="gl-title">
+            Mes compétences
+          </div>
           <div className="gl-text">Differents logiciels que j’utilise:</div>
         </div>
-        <Carousel />
+        <div className="carousel-container-test">
+          <Carousel />
+        </div>
       </div>
     </div>
   )

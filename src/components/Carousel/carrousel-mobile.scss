@@ -1,0 +1,18 @@
+@media (max-width: 767.98px) {
+  .carousel-global-container {
+    display: none;
+  }
+
+  .carousel-container-imgs-mobile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .img-mobile {
+    width: 106.485px;
+    height: 108.175px;
+    flex-shrink: 0;
+  }
+}

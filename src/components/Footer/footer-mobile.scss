@@ -1,0 +1,28 @@
+@media (max-width: 767.98px) {
+  .ft-global-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .ft-icons-container {
+    display: flex;
+    gap: 5px;
+    font-size: 26px;
+  }
+
+  .ft-text {
+    color: var(--gray-300, #c8c8c8);
+    font-family: Raleway;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

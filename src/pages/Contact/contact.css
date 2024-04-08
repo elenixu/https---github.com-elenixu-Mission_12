@@ -1,14 +1,13 @@
-body {
-  max-width: 1400px;
-  display: flex;
-  justify-content: center;
-}
-
 .ct-container-global {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-top: 130px;
+}
+
+.ct-content {
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  padding-top: 50px;
 }
 
 .ct-title {

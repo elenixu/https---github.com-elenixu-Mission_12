@@ -1,0 +1,35 @@
+@media (max-width: 767.98px) {
+  .h-links-text {
+    color: var(--white, #fff);
+    font-family: Raleway;
+    font-size: 14.583px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .h-links-container {
+    display: none;
+  }
+
+  .h-links-container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .h-button-container-mobile {
+    display: flex;
+    width: 75%;
+    height: 70px;
+    padding: 0px 31px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: rgba(33, 31, 35, 0.35);
+  }
+}

@@ -7,7 +7,9 @@ function Contact() {
     <div className="ct-container-global">
       <div className="ct-content">
         <div className="ct-container-text">
-          <div className="gl-title">Me contacter</div>
+          <div id="contact" className="gl-title">
+            Me contacter
+          </div>
           <div className="gl-text">Let’s get in touch!</div>
         </div>
         <div className="ct-container-form">

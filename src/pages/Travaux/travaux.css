@@ -1,10 +1,55 @@
-body {
-  max-width: 1400px;
-}
-
-.tr-container-global {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 50px;
+@media (min-width: 767.98px) {
+  .tr-container-global {
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+  }
+  .tr-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tr-container-text {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .tr-card {
+    position: relative;
+    width: 43%;
+    height: auto;
+    padding-right: 30px;
+    flex-shrink: 0;
+  }
+  .tr-pic {
+    width: 100%;
+    height: auto;
+  }
+  .tr-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 30px); /* Adjusted width to account for padding */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    display: flex;
+    border-radius: 21.875px;
+    justify-content: center;
+    align-items: center;
+  }
+  .tr-card:hover .tr-overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  .tr-text {
+    color: var(--gray-400, #ffffff);
+    font-family: Raleway;
+    font-size: 17.5px;
+    font-style: normal;
+  }
+  .tr-container-cards {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=travaux.css.map */

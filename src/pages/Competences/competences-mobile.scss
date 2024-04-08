@@ -1,0 +1,41 @@
+@media (max-width: 767.98px) {
+  .cm-container-global {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cm-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .cm-container-info {
+    padding-top: 72px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .gl-title {
+    justify-content: center;
+    display: flex;
+    color: var(--gray-300, #c8c8c8);
+    font-family: Raleway;
+    font-size: 35.542px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .gl-text {
+    justify-content: center;
+    display: flex;
+    color: var(--gray-400, #6f6f6f);
+    font-family: Raleway;
+    font-size: 14.217px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28.434px; /* 200% */
+  }
+}
