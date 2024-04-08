@@ -13,6 +13,11 @@
     display: none;
   }
 
+  .main-header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .h-links-container-mobile {
     display: flex;
     justify-content: center;

@@ -15,28 +15,16 @@ rootElement.render(
   <div className="container-global">
     <React.StrictMode>
       <Router>
-        {/* Conditionally render based on screen size */}
-        {window.innerWidth <= 767.98 ? (
-          // Render Home component first on mobile
-          <>
-            <Home />
-            <Header />
-            <Competences />
-            <Travaux />
-            <Contact />
-            <Footer />
-          </>
-        ) : (
-          // Render Home component after Header for desktop
-          <>
+        <>
+          <div className="main-header">
             <Header />
             <Home />
-            <Competences />
-            <Travaux />
-            <Contact />
-            <Footer />
-          </>
-        )}
+          </div>
+          <Competences />
+          <Travaux />
+          <Contact />
+          <Footer />
+        </>
       </Router>
     </React.StrictMode>
   </div>
