@@ -23,7 +23,6 @@
   }
   .carousel .carousel-images {
     display: flex;
-    overflow-x: hidden;
     padding-left: 30px;
     gap: 60px;
   }
