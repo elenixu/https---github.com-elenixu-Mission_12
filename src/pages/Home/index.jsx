@@ -3,19 +3,17 @@ import '../../Styles/app.css'
 
 import profilePic from '../../assets/Group 1443.png'
 import cvLink from '../../assets/cv-1.png'
+import { useTranslation } from 'react-i18next'
 
 function Home(buttonText) {
+  const [t, i18n] = useTranslation('global')
+
   return (
     <div>
       <div id="about" className="hm-global-container">
         <div className="hm-container-info">
-          <div className="hm-name">Salut, je suis Elena</div>
-          <div className="hm-text">
-            Je suis diplômé en intégration web, j'ai acquis une solide
-            compréhension des principes fondamentaux du développement web. Je
-            suis motivé, créatif et prêt à apprendre de nouvelles technologies
-            pour améliorer mes compétences en intégration web.
-          </div>
+          <div className="hm-name">{t('home')}</div>
+          <div className="hm-text">{t('message')}</div>
           <a href={cvLink} className="hm-button">
             Télécharger mon CV
           </a>
