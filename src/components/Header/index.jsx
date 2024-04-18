@@ -1,7 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLanguage } from '@fortawesome/free-solid-svg-icons'
+import imgLang from '../../assets/Primary.png'
 
 import '../../Styles/app.css'
 
@@ -32,26 +31,11 @@ function Header() {
           onChange={(e) => handleChangeLanguage(e.target.value)}
         >
           <option value="Eng">
+            <img src={imgLang} alt="language_icon" />
             {t('button-language-eng')}
-            <FontAwesomeIcon
-              icon={faLanguage}
-              style={{ color: '#000000', marginLeft: '5px' }}
-            />
           </option>
-          <option value="Fr">
-            {t('button-language-fr')}
-            <FontAwesomeIcon
-              icon={faLanguage}
-              style={{ color: '#000000', marginLeft: '5px' }}
-            />
-          </option>
-          <option value="Esp">
-            {t('button-language-esp')}
-            <FontAwesomeIcon
-              icon={faLanguage}
-              style={{ color: '#000000', marginLeft: '5px' }}
-            />
-          </option>
+          <option value="Fr">{t('button-language-fr')}</option>
+          <option value="Esp">{t('button-language-esp')}</option>
         </select>
       </div>
 
