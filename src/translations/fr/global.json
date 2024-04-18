@@ -1,4 +1,22 @@
 {
-  "home": "Salut, je suis Elena",
-  "message": "Je suis diplômé en intégration web, j'ai acquis une solide compréhension des principes fondamentaux du développement web. Je suis motivé, créatif et prêt à apprendre de nouvelles technologies pour améliorer mes compétences en intégration web."
+  "header-home": "A Propos",
+  "header-competences": "Compétences",
+  "header-projects": "Projets",
+  "header-contact": "Contactez-moi",
+  "button-language-eng": "Anglais",
+  "button-language-fr": "Français",
+  "button-language-esp": "Espagnol",
+  "home-title": "Salut, je suis Elena",
+  "home-message": "Je suis diplômé en intégration web, j'ai acquis une solide compréhension des principes fondamentaux du développement web. Je suis motivé, créatif et prêt à apprendre de nouvelles technologies pour améliorer mes compétences en intégration web.",
+  "home-button": "Télécharger mon CV",
+  "competences-title": "Mes compétences",
+  "competences-message": "Differents logiciels que j’utilise",
+  "works-title": "Mes travaux",
+  "works-message": "Différents projets réalisés :",
+  "works-git": "Lien GitHub ici",
+  "contact-title": "Me contacter",
+  "contact-title-placeholder": "Votre email ...",
+  "contact-message": "Restons en contact !",
+  "contact-message-placeholder": "Votre message ...",
+  "footer-message": "Merci de votre visite 🤍"
 }

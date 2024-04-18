@@ -1,10 +1,12 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 
 import '../../Styles/app.css'
 
 function Header() {
-  const { i18n } = useTranslation('global') // Destructure i18n from useTranslation hook
+  const { t, i18n } = useTranslation('global')
 
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang)
@@ -14,20 +16,43 @@ function Header() {
     <div className="h-global-container">
       <div className="h-links-container">
         <a href="#about" className="h-links-text">
-          À propos
+          {t('header-home')}
         </a>
         <a href="#skills" className="h-links-text">
-          Compétences
+          {t('header-competences')}
         </a>
         <a href="#projects" className="h-links-text">
-          Projets
+          {t('header-projects')}
         </a>
         <a href="#contact" className="h-links-text">
-          Contactez-moi
+          {t('header-contact')}
         </a>
-        <button onClick={() => handleChangeLanguage('Eng')}>ENG</button>
-        <button onClick={() => handleChangeLanguage('Fr')}>FR</button>
-        <button onClick={() => handleChangeLanguage('Esp')}>ESP</button>
+        <select
+          className="h-buttons-container"
+          onChange={(e) => handleChangeLanguage(e.target.value)}
+        >
+          <option value="Eng">
+            {t('button-language-eng')}
+            <FontAwesomeIcon
+              icon={faLanguage}
+              style={{ color: '#000000', marginLeft: '5px' }}
+            />
+          </option>
+          <option value="Fr">
+            {t('button-language-fr')}
+            <FontAwesomeIcon
+              icon={faLanguage}
+              style={{ color: '#000000', marginLeft: '5px' }}
+            />
+          </option>
+          <option value="Esp">
+            {t('button-language-esp')}
+            <FontAwesomeIcon
+              icon={faLanguage}
+              style={{ color: '#000000', marginLeft: '5px' }}
+            />
+          </option>
+        </select>
       </div>
 
       <div className="h-links-container-mobile">

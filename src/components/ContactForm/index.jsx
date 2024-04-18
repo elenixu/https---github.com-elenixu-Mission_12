@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../../components/Button'
+import { useTranslation } from 'react-i18next'
 
 const ContactForm = () => {
   const [email, setEmail] = useState('')
@@ -23,6 +24,8 @@ const ContactForm = () => {
     setMessage('')
   }
 
+  const [t, i18n] = useTranslation('global')
+
   return (
     <div className="cf-container">
       <form onSubmit={handleSubmit}>
@@ -31,7 +34,7 @@ const ContactForm = () => {
             type="email"
             id="email"
             className="cf-container-email"
-            placeholder="Votre e-mail..."
+            placeholder={t('contact-title-placeholder')}
             value={email}
             onChange={handleEmailChange}
             required
@@ -41,7 +44,7 @@ const ContactForm = () => {
           <textarea
             id="message"
             className="cf-container-message"
-            placeholder="Votre message..."
+            placeholder={t('contact-message-placeholder')}
             value={message}
             onChange={handleMessageChange}
             rows={4}

@@ -1,4 +1,22 @@
 {
-  "home": "Hi, I am Elena",
-  "message": "I am graduated in web integration, I have acquired a solid understanding of the fundamental principles of web development. I am motivated, creative, and ready to learn new technologies to improve my skills in web integration"
+  "header-home": "About",
+  "header-competences": "Skills",
+  "header-projects": "Projects",
+  "header-contact": "Contact",
+  "button-language-eng": "English",
+  "button-language-fr": "French",
+  "button-language-esp": "Spanish",
+  "home-title": "Hi, I am Elena",
+  "home-message": "I am graduated in web integration, I have acquired a solid understanding of the fundamental principles of web development. I am motivated, creative, and ready to learn new technologies to improve my skills in web integration",
+  "home-button": "Download my Resume",
+  "competences-title": "My skills",
+  "competences-message": "Different softwares that I use:",
+  "works-title": "My works",
+  "works-message": "Various projects completed:",
+  "works-git": "GitHub link here",
+  "contact-title": "Contact me",
+  "contact-title-placeholder": "Your email ...",
+  "contact-message": "Let's get in touch!",
+  "contact-message-placeholder": "Your message ...",
+  "footer-message": "Thank you for your visit 🤍"
 }

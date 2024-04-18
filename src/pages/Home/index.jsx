@@ -12,10 +12,10 @@ function Home(buttonText) {
     <div>
       <div id="about" className="hm-global-container">
         <div className="hm-container-info">
-          <div className="hm-name">{t('home')}</div>
-          <div className="hm-text">{t('message')}</div>
+          <div className="hm-name">{t('home-title')}</div>
+          <div className="hm-text">{t('home-message')}</div>
           <a href={cvLink} className="hm-button">
-            Télécharger mon CV
+            {t('home-button')}
           </a>
         </div>
         <div className="hm-container-image">
