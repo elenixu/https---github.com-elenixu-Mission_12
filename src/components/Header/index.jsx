@@ -30,12 +30,12 @@ function Header() {
           className="h-buttons-container"
           onChange={(e) => handleChangeLanguage(e.target.value)}
         >
-          <option value="Eng">
+          <option value="fr">{t('button-language-fr')}</option>
+          <option value="eng">
             <img src={imgLang} alt="language_icon" />
             {t('button-language-eng')}
           </option>
-          <option value="Fr">{t('button-language-fr')}</option>
-          <option value="Esp">{t('button-language-esp')}</option>
+          <option value="esp">{t('button-language-esp')}</option>
         </select>
       </div>
 

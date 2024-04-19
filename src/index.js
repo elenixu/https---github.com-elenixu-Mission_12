@@ -19,15 +19,15 @@ const rootElement = createRoot(root)
 
 i18next.init({
   interpolation: { escapeValue: true },
-  lng: 'Eng',
+  lng: 'fr',
   resources: {
-    Eng: {
+    eng: {
       global: global_eng,
     },
-    Fr: {
+    fr: {
       global: global_fr,
     },
-    Esp: {
+    esp: {
       global: global_esp,
     },
   },

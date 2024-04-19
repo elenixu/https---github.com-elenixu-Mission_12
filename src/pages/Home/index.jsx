@@ -2,11 +2,16 @@ import React from 'react'
 import '../../Styles/app.css'
 
 import profilePic from '../../assets/Group 1443.png'
-import cvLink from '../../assets/cv-1.png'
 import { useTranslation } from 'react-i18next'
 
 function Home(buttonText) {
   const [t, i18n] = useTranslation('global')
+
+  // Get the current language code
+  const currentLanguage = i18n.language
+
+  // Load the PNG file for the current language
+  const cvLink = require(`../../translations/${currentLanguage}/cv-${currentLanguage}.png`)
 
   return (
     <div>
@@ -14,7 +19,7 @@ function Home(buttonText) {
         <div className="hm-container-info">
           <div className="hm-name">{t('home-title')}</div>
           <div className="hm-text">{t('home-message')}</div>
-          <a href={cvLink} className="hm-button">
+          <a href={cvLink} download="resume.png" className="hm-button">
             {t('home-button')}
           </a>
         </div>
