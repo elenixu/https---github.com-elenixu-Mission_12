@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Button from '../../components/Button'
 import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser'
 
 const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const formRef = useRef()
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
@@ -16,19 +18,32 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // handle form submission logic here,  (sending data to a server
-    console.log('Email:', email)
-    console.log('Message:', message)
-    // Reset form fields after submission
-    setEmail('')
-    setMessage('')
+
+    emailjs
+      .sendForm(
+        'service_2te30bs',
+        'template_ru88diq',
+        formRef.current,
+        'Um2V-wsJwhJEljFVU'
+      )
+      .then(
+        () => {
+          console.log('SUCCESS!')
+          // Reset form fields after successful submission
+          setEmail('')
+          setMessage('')
+        },
+        (error) => {
+          console.log('FAILED...', error.text)
+        }
+      )
   }
 
   const [t, i18n] = useTranslation('global')
 
   return (
     <div className="cf-container">
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <div>
           <input
             type="email"
@@ -38,6 +53,7 @@ const ContactForm = () => {
             value={email}
             onChange={handleEmailChange}
             required
+            name="user_email"
           />
         </div>
         <div>
@@ -49,6 +65,7 @@ const ContactForm = () => {
             onChange={handleMessageChange}
             rows={4}
             required
+            name="message"
           />
         </div>
         <div className="cf-button-container-mobile">
