@@ -1,13 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react'
-import Button from '../../components/Button'
+import React, { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
-import Modal from 'react-modal'
 
 const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [modal, setModal] = useState(false)
   const formRef = useRef()
 
   const handleEmailChange = (e) => {
@@ -16,6 +14,10 @@ const ContactForm = () => {
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value)
+  }
+
+  const toggleModal = () => {
+    setModal(!modal)
   }
 
   const handleSubmit = (e) => {
@@ -28,79 +30,66 @@ const ContactForm = () => {
         formRef.current,
         'Um2V-wsJwhJEljFVU'
       )
-      .then(
-        () => {
-          console.log('SUCCESS!')
-          // Show success modal
-          setShowSuccessModal(true)
-          // Reset form fields after successful submission
-          setEmail('')
-          setMessage('')
-        },
-        (error) => {
-          console.log('FAILED...', error.text)
-        }
-      )
-  }
-
-  const handleCloseModal = () => {
-    setShowSuccessModal(false)
+      .then(() => {
+        // Show modal after successful submission
+        setModal(true)
+        // Reset form fields after successful submission
+        setEmail('')
+        setMessage('')
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error)
+      })
   }
 
   const [t, i18n] = useTranslation('global')
 
-  useEffect(() => {
-    if (showSuccessModal) {
-      const timer = setTimeout(() => {
-        setShowSuccessModal(false)
-      }, 5000)
-
-      return () => clearTimeout(timer)
-    }
-  }, [showSuccessModal])
-
   return (
-    <div className="cf-container">
-      <form ref={formRef} onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="email"
-            id="email"
-            className="cf-container-email"
-            placeholder={t('contact-title-placeholder')}
-            value={email}
-            onChange={handleEmailChange}
-            required
-            name="user_email"
-          />
+    <div>
+      <div className="cf-container">
+        <form ref={formRef} onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="email"
+              id="email"
+              className="cf-container-email"
+              placeholder={t('contact-title-placeholder')}
+              value={email}
+              onChange={handleEmailChange}
+              required
+              name="user_email"
+            />
+          </div>
+          <div>
+            <textarea
+              id="message"
+              className="cf-container-message"
+              placeholder={t('contact-message-placeholder')}
+              value={message}
+              onChange={handleMessageChange}
+              rows={4}
+              required
+              name="message"
+            />
+          </div>
+          <div className="cf-button-container-mobile">
+            <button type="submit" className="hm-button">
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <div>{t('contact-modal')}</div>
+            <button className="close-modal" onClick={toggleModal}>
+              X
+            </button>
+          </div>
         </div>
-        <div>
-          <textarea
-            id="message"
-            className="cf-container-message"
-            placeholder={t('contact-message-placeholder')}
-            value={message}
-            onChange={handleMessageChange}
-            rows={4}
-            required
-            name="message"
-          />
-        </div>
-        <div className="cf-button-container-mobile">
-          <Button buttonText="Envoyer" className="hm-button" />
-        </div>
-      </form>
-      <Modal
-        isOpen={showSuccessModal}
-        onRequestClose={handleCloseModal}
-        contentLabel="Success Modal"
-        className="modal-overlay"
-        overlayClassName="modal-content"
-      >
-        <div className="success-modal">
-          <p>{t('Thank you! Your message has been sent!')}</p>
-        </div>
-      </Modal>
+      )}
     </div>
   )
 }
