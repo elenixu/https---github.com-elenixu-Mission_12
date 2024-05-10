@@ -40,24 +40,37 @@ function Header() {
       </div>
 
       <div className="h-links-container-mobile">
+        <div className="h-button-container-mobile-2">
+          <select
+            className="h-buttons-container"
+            onChange={(e) => handleChangeLanguage(e.target.value)}
+          >
+            <option value="fr">{t('button-language-fr')}</option>
+            <option value="eng">
+              <img src={imgLang} alt="language_icon" />
+              {t('button-language-eng')}
+            </option>
+            <option value="esp">{t('button-language-esp')}</option>
+          </select>
+        </div>
         <div className="h-button-container-mobile">
           <a href="#about" className="h-links-text">
-            À propos
+            {t('header-home')}
           </a>
         </div>
         <div className="h-button-container-mobile">
           <a href="#skills" className="h-links-text">
-            Compétences
+            {t('header-competences')}
           </a>
         </div>
         <div className="h-button-container-mobile">
           <a href="#projects" className="h-links-text">
-            Projets
+            {t('header-projects')}
           </a>
         </div>
         <div className="h-button-container-mobile">
           <a href="#contact" className="h-links-text">
-            Contactez-moi
+            {t('header-contact')}
           </a>
         </div>
       </div>

@@ -1,0 +1,25 @@
+.crfl-global-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tag-container {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 4px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4.207px;
+  flex-shrink: 0;
+  border-radius: 12.622px;
+  background: #1e1e1e;
+  color: #fff;
+  font-family: Raleway;
+  font-size: 10.098px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

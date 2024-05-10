@@ -33,4 +33,32 @@
     border-radius: 100px;
     background: rgba(33, 31, 35, 0.35);
   }
+  .h-button-container-mobile-2 {
+    display: flex;
+    width: 75%;
+    height: 70px;
+    padding: 0px 31px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 100px;
+  }
+  .h-buttons-container {
+    font-family: Raleway;
+    display: flex;
+    padding: 12px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #0c0c0d;
+    border-radius: 100px;
+    background: #fff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    border: none;
+    appearance: none;
+  }
 }/*# sourceMappingURL=header-mobile.css.map */

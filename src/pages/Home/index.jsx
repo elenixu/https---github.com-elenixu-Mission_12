@@ -56,17 +56,12 @@ function Home() {
           <img className="hm-image" src={profilePic} alt="Profile Pic" />
         </div>
         <div className="hm-container-info">
-          <div className="hm-name">Salut, je suis Elena</div>
-          <div className="hm-text">
-            Je suis diplômé en intégration web, j'ai acquis une solide
-            compréhension des principes fondamentaux du développement web. Je
-            suis motivé, créatif et prêt à apprendre de nouvelles technologies
-            pour améliorer mes compétences en intégration web.
-          </div>
+          <div className="hm-name">{t('home-title')}</div>
+          <div className="hm-text">{t('home-message')}</div>
         </div>
         <div className="hm-button-container">
           <a href={cvLink} className="hm-button">
-            Télécharger mon CV
+            {t('home-button')}
           </a>
         </div>
       </div>

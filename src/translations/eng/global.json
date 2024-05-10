@@ -7,7 +7,7 @@
   "button-language-fr": "French",
   "button-language-esp": "Spanish",
   "home-title": "Hi, I am Elena",
-  "home-message": "I am graduated in web integration, I have acquired a solid understanding of the fundamental principles of web development. I am motivated, creative, and ready to learn new technologies to improve my skills in web integration",
+  "home-message": "Former animation filmmaker, I reconverted into web development. I am seeking employment as a web developer/integrator or an apprenticeship.",
   "home-button": "Download my Resume",
   "competences-title": "My skills",
   "competences-message": "Different softwares that I use:",
@@ -19,5 +19,13 @@
   "contact-message": "Let's get in touch!",
   "contact-message-placeholder": "Your message ...",
   "contact-modal": "Thank you! Your message has been sent! :D",
-  "footer-message": "Thank you for your visit 🤍"
+  "footer-message": "Thank you for your visit 🤍",
+  "travaux-argentbank": "Project completed for my web integrator training at Openclassrooms. With the provided mockup,  I developed the ArgenBank website with user authentication using HTML, CSS, JavaScript, React, React Router, Redux, Sass, an API for data retrieval, and MongoDB for storing user information. The final result is a secured web application allowing clients to log in to their account and view their banking transactions. This project allowed me to strengthen my React skills and discover Redux architecture for state management in web applications.",
+  "travaux-kasa": "Project completed for my web integrator training at Openclassrooms. I developed this apartment rental platform using HTML, CSS, JavaScript, along with React and React Router libraries to create dynamic and interactive user interfaces. I also utilized Sass for style management and an API to retrieve the data to display on the application. I created a dropdown component for apartment descriptions and amenities, as well as a slider for image display. The final result is a functional website faithful to the Figma mockup, where users can browse through the apartments and access all the information for each one.",
+  "travaux-724": "Project completed as part of my web integrator training at Openclassrooms. I debugged and fixed several issues with the website 724 events using yarn test and chrome devtools. This project was a great excercise to practice debugging a code that was already created.",
+  "travaux-booki": "Project completed as part of my web integrator training at Openclassrooms. I created a responsive webpage for Booki, a holiday planning website. I integrated the desktop, tablet, and mobile versions of this application following a mockup on Figma.",
+  "travaux-nina": "Project completed as part of my web integrator training at Openclassrooms. I debugged Nina Carducci's portfolio, ensuring improved accessibility, optimized performance, and enhanced SEO. I enhanced accessibility by incorporating semantic tags and clear navigation for users with visual impairments. Performance optimization was achieved through image compression, file minimization, and page loading speed enhancement techniques. Additionally, I improved SEO by implementing appropriate meta tags, optimizing URLs, and refining the site structure to facilitate better indexing by search engines.",
+  "travaux-ohmy": "Project completed as part of my web integrator training at Openclassrooms. Starting from a provided mockup in Figma, I worked on integrating the mobile version of a food tech website with CSS animations. This project allowed me to apply my HTML and CSS skills while using Sass to create the CSS code management. The final result is a modern website showcasing the dishes offered by the different restaurants. Thanks to the use of Sass, I was able to increase productivity and maintainability of the CSS code, allowing me to better organize my code and make it more manageable and clean.",
+  "travaux-print": "Project completed as part of my web integrator training at Openclassrooms. I dynamized the static printing website Print it by adding a carousel in JavaScript.",
+  "travaux-sophie": "Project completed as part of my web integrator training at Openclassrooms. I created a dynamic portfolio website for the client Sophie Bluel with JavaScript, in which the client is able to retrieve and handle her data via forms and a login page. I was able to practice my skills by manipulating DOM elements and managing user events with JavaScript."
 }

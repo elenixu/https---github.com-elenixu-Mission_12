@@ -1,0 +1,109 @@
+.cr-container {
+  width: 368px;
+  height: 471.939px;
+  flex-shrink: 0;
+  border-radius: 14.046px;
+  background: #fff;
+}
+
+.card-back {
+  background: black;
+}
+
+.cr-container-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cr-title {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-family: Raleway;
+  font-size: 22.473px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cr-title-line {
+  margin-left: 18px;
+  margin-right: 18px;
+  width: 335.695px;
+  height: 1.405px;
+  background: #000;
+}
+
+.cr-text {
+  display: flex;
+  justify-content: center;
+  color: #968a8a;
+  font-family: Raleway;
+  font-size: 11.237px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cr-picture {
+  padding: 5px;
+}
+
+.cr-title-back {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 77px;
+  padding-bottom: 10px;
+}
+
+.cr-text-back {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
+.cr-buttons {
+  justify-content: center;
+  display: flex;
+  padding: 8.75px 29.167px;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 72.917px;
+  background: var(--white, #fff);
+  color: var(--gray-900, #0c0c0d);
+  font-family: Raleway;
+  font-size: 11.667px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cr-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.container-cards {
+  display: flex;
+  max-width: 1222px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 32px 32px;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=card.css.map */
