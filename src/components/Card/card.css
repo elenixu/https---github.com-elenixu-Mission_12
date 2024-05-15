@@ -67,6 +67,9 @@
 
 .cr-text-back {
   padding: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 250px;
   color: #fff;
   text-align: center;
   font-family: Raleway;
@@ -97,6 +100,7 @@
   display: flex;
   justify-content: center;
   gap: 15px;
+  padding-top: 30px;
 }
 
 .container-cards {
@@ -106,4 +110,4 @@
   align-content: flex-start;
   gap: 32px 32px;
   flex-wrap: wrap;
-}/*# sourceMappingURL=card.css.map */
+} /*# sourceMappingURL=card.css.map */
