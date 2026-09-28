@@ -1,0 +1,305 @@
+$burgundy: #991f2b;
+$burgundy-dark: #751721;
+$text: #202020;
+$muted: #6d6d6d;
+$paper: #ffffff;
+
+.cv-page {
+  width: 210mm;
+  min-height: 297mm;
+
+  margin: 40px auto;
+
+  background: $paper;
+  color: $text;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  font-family: 'Arial', sans-serif;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= HEADER ================= */
+
+.cv-header {
+  padding: 18mm 18mm 12mm 18mm;
+}
+
+.cv-name {
+  font-size: 2.7rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+
+  text-transform: uppercase;
+}
+
+.cv-title {
+  margin-top: 8px !important;
+
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.cv-subtitle {
+  margin-top: 4px !important;
+
+  color: $burgundy;
+
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+
+/* ================= BODY ================= */
+
+.cv-body {
+  display: grid;
+
+  grid-template-columns: 32% 68%;
+
+  min-height: 230mm;
+}
+
+/* ================= SIDEBAR ================= */
+
+.cv-sidebar {
+  background: $burgundy;
+  color: white;
+
+  padding: 12mm 9mm;
+}
+
+.sidebar-section {
+  margin-bottom: 28px;
+}
+
+.sidebar-title {
+  margin-bottom: 12px !important;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em !important;
+}
+
+.cv-sidebar p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.cv-sidebar a {
+  display: block;
+
+  margin: 4px 0;
+
+  color: white;
+
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.cv-sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SKILLS ================= */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.skill-chip {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: white !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+  font-size: 0.7rem !important;
+}
+
+.sidebar-item {
+  margin-bottom: 4px !important;
+}
+
+/* ================= LANGUAGES ================= */
+
+.language {
+  margin-bottom: 10px;
+}
+
+.language-name {
+  font-weight: 600 !important;
+}
+
+.language-level {
+  opacity: 0.8;
+}
+
+/* ================= MAIN ================= */
+
+.cv-main {
+  padding: 12mm 14mm;
+}
+
+.main-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin-bottom: 18px !important;
+  padding-bottom: 7px;
+
+  border-bottom: 2px solid $burgundy;
+
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em !important;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-text {
+  color: #444;
+
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience {
+  margin-bottom: 24px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.experience-role {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+.experience-company {
+  margin-top: 3px !important;
+
+  color: $burgundy;
+
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+}
+
+.experience-date {
+  flex-shrink: 0;
+
+  color: $muted;
+  text-align: right;
+}
+
+.experience-date p {
+  font-size: 0.72rem;
+}
+
+.experience-description {
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+}
+
+.experience-description li {
+  margin-bottom: 5px;
+
+  color: #3d3d3d;
+
+  font-size: 0.8rem !important;
+  line-height: 1.45 !important;
+}
+
+/* ================= EDUCATION ================= */
+
+.education {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.education-degree {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+
+.education-school {
+  margin-top: 3px !important;
+
+  color: $burgundy;
+
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+}
+
+.education-date {
+  flex-shrink: 0;
+
+  color: $muted;
+  text-align: right;
+}
+
+.education-date p {
+  font-size: 0.72rem;
+}
+
+/* ================= SMALL SCREENS ================= */
+
+@media (max-width: 850px) {
+  .cv-page {
+    width: 100%;
+    min-height: auto;
+
+    margin: 0;
+
+    box-shadow: none;
+  }
+
+  .cv-body {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-header {
+    padding: 40px 25px;
+  }
+
+  .cv-sidebar,
+  .cv-main {
+    padding: 30px 25px;
+  }
+
+  .experience-header,
+  .education {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .experience-date,
+  .education-date {
+    text-align: left;
+  }
+}
