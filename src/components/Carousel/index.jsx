@@ -32,8 +32,6 @@ const images = [
   { src: sassImg, alt: 'SaSS Pic' },
 ]
 
-const numImagesToShow = 4 // Number of images to show in the carousel
-
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -45,20 +43,6 @@ const Carousel = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     )
-  }
-
-  const getIndicesToDisplay = () => {
-    const start = currentIndex % images.length
-    const end = (start + numImagesToShow) % images.length
-    return start <= end
-      ? Array.from(
-          { length: numImagesToShow },
-          (_, index) => (start + index) % images.length,
-        )
-      : Array.from(
-          { length: numImagesToShow },
-          (_, index) => (start + index + images.length) % images.length,
-        )
   }
 
   return (
@@ -89,35 +73,60 @@ const Carousel = () => {
             <FontAwesomeIcon icon={faCircleChevronLeft} />
           </IconButton>
         </Stack>
-        <Stack
-          direction="row"
-          spacing={{ sm: 1.5, md: 3 }}
-          alignItems="center"
-          justifyContent="space-evenly"
-          sx={{ gridColumn: 2, gridRow: 1, minWidth: 0 }}
+        <Box
+          role="region"
+          aria-label="Skills carousel"
+          sx={{
+            gridColumn: 2,
+            gridRow: 1,
+            position: 'relative',
+            width: '100%',
+            height: { sm: 130, md: 170 },
+            overflow: 'hidden',
+            minWidth: 0,
+            maskImage:
+              'linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)',
+          }}
         >
-          {getIndicesToDisplay().map((index) => (
-            <Box
-              component="img"
-              key={index}
-              src={images[index].src}
-              alt={images[index].alt}
-              sx={{
-                width: '100%',
-                minWidth: 0,
-                height: { sm: 110, md: 145 },
-                maxWidth: 190,
-                objectFit: 'contain',
-                opacity: index === currentIndex % images.length ? 1 : 0.58,
-                transform:
-                  index === currentIndex % images.length
-                    ? 'scale(1.08)'
+          {images.map((image, index) => {
+            const half = Math.floor(images.length / 2)
+            const offset =
+              ((index - currentIndex + images.length + half) % images.length) -
+              half
+            const isVisible = Math.abs(offset) <= 2
+            const isActive = index === currentIndex
+
+            return (
+              <Box
+                component="img"
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                aria-hidden={!isVisible}
+                sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: `calc(50% + ${offset * 22}%)`,
+                  width: '20%',
+                  height: { sm: 105, md: 140 },
+                  maxWidth: 190,
+                  objectFit: 'contain',
+                  opacity: isVisible ? (isActive ? 1 : 0.58) : 0,
+                  transform: `translate(-50%, -50%) scale(${isActive ? 1.15 : 0.88})`,
+                  filter: isActive
+                    ? 'drop-shadow(0 8px 16px rgba(153,31,43,.35))'
                     : 'none',
-                transition: 'all .25s ease',
-              }}
-            />
-          ))}
-        </Stack>
+                  zIndex: isActive ? 1 : 0,
+                  transition:
+                    'left 520ms cubic-bezier(.22,.8,.25,1), transform 520ms cubic-bezier(.22,.8,.25,1), opacity 350ms ease, filter 350ms ease',
+                  '@media (prefers-reduced-motion: reduce)': {
+                    transition: 'none',
+                  },
+                }}
+              />
+            )
+          })}
+        </Box>
         <Stack
           alignItems="center"
           justifyContent="center"
