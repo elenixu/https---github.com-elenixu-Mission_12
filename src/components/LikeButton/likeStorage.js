@@ -1,28 +1,19 @@
-const LIKE_STATE_KEY = 'portfolio-like-state'
+const HAS_LIKED_KEY = 'portfolio-has-liked'
 
-// Storage adapter isolated from the component so it can be replaced with Supabase later.
 export const likeStorage = {
-  load() {
+  hasLiked() {
     try {
-      const savedState = window.localStorage.getItem(LIKE_STATE_KEY)
-      const parsedState = savedState ? JSON.parse(savedState) : null
-
-      return {
-        count: Number.isFinite(parsedState?.count)
-          ? Math.max(0, parsedState.count)
-          : 0,
-        hasLiked: parsedState?.hasLiked === true,
-      }
+      return window.localStorage.getItem(HAS_LIKED_KEY) === 'true'
     } catch {
-      return { count: 0, hasLiked: false }
+      return false
     }
   },
 
-  save(state) {
+  saveLiked() {
     try {
-      window.localStorage.setItem(LIKE_STATE_KEY, JSON.stringify(state))
+      window.localStorage.setItem(HAS_LIKED_KEY, 'true')
     } catch {
-      // Keep the control usable for this session if browser storage is unavailable.
+      // Keep the UI usable if localStorage is unavailable.
     }
   },
 }
