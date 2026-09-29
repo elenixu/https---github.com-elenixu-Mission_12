@@ -16,6 +16,8 @@ import global_esp from './translations/esp/global.json'
 
 import i18next from 'i18next'
 import { I18nextProvider } from 'react-i18next'
+import { Box, CssBaseline, ThemeProvider } from '@mui/material'
+import theme from './theme'
 
 const root = document.getElementById('root')
 const rootElement = createRoot(root)
@@ -38,22 +40,29 @@ i18next.init({
 
 const Portfolio = () => {
   return (
-    <>
-      <div className="main-header">
+    <Box component="div" sx={{ minHeight: '100vh', overflowX: 'hidden' }}>
+      <Box
+        component="header"
+        sx={{
+          background:
+            'radial-gradient(ellipse at 78% 35%, rgba(153,31,43,.16), transparent 35%)',
+        }}
+      >
         <Header />
         <Home />
-      </div>
+      </Box>
 
       <Competences />
       <Travaux />
       <Contact />
       <Footer />
-    </>
+    </Box>
   )
 }
 
 rootElement.render(
-  <div className="container-global">
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
     <React.StrictMode>
       <I18nextProvider i18n={i18next}>
         <Router>
@@ -64,5 +73,5 @@ rootElement.render(
         </Router>
       </I18nextProvider>
     </React.StrictMode>
-  </div>,
+  </ThemeProvider>,
 )

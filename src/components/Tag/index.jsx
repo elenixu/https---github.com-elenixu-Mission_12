@@ -1,16 +1,26 @@
 import React from 'react'
-import '../../Styles/app.css'
+import { Chip, Stack } from '@mui/material'
 
 function Tags(props) {
   return (
-    <div className="crfl-global-container">
+    <Stack
+      direction="row"
+      useFlexGap
+      flexWrap="wrap"
+      justifyContent="center"
+      spacing={0.75}
+      sx={{ width: '100%', minWidth: 0, maxWidth: '100%', py: 0.5 }}
+    >
       {/* Map through the tag prop array and render each tag */}
       {props.taglist.map((tag, index) => (
-        <div key={index} className="tag-container">
-          {tag}
-        </div>
+        <Chip
+          key={`${tag}-${index}`}
+          label={tag}
+          size="small"
+          sx={{ bgcolor: '#e4e4e8', color: '#28282c', fontWeight: 600 }}
+        />
       ))}
-    </div>
+    </Stack>
   )
 }
 

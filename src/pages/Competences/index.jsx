@@ -1,24 +1,40 @@
 import React from 'react'
-import '../../Styles/app.css'
 import Carousel from '../../components/Carousel'
 import { useTranslation } from 'react-i18next'
+import { Box, Container, Typography } from '@mui/material'
 
 function Competences() {
-  const [t, i18n] = useTranslation('global')
+  const [t] = useTranslation('global')
   return (
-    <div className="cm-container-global">
-      <div className="cm-content">
-        <div className="cm-container-info">
-          <div id="skills" className="gl-title">
-            {t('competences-title')}
-          </div>
-          <div className="gl-text">{t('competences-message')}</div>
-        </div>
-        <div className="carousel-container-test">
-          <Carousel />
-        </div>
-      </div>
-    </div>
+    <Box
+      component="section"
+      id="skills"
+      sx={{
+        py: { xs: 7, md: 12 },
+        borderTop: '1px solid rgba(255,255,255,.07)',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Typography
+          component="h2"
+          variant="h3"
+          sx={{
+            fontSize: { xs: '2rem', md: '2.5rem' },
+            fontWeight: 400,
+            mb: 1.5,
+          }}
+        >
+          {t('competences-title')}
+        </Typography>
+        <Typography
+          color="text.secondary"
+          sx={{ maxWidth: 780, lineHeight: 1.9, mb: 4 }}
+        >
+          {t('competences-message')}
+        </Typography>
+        <Carousel />
+      </Container>
+    </Box>
   )
 }
 

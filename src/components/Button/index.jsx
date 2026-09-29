@@ -1,7 +1,8 @@
 import React from 'react'
+import { Button as MuiButton } from '@mui/material'
 
-const Button = ({ buttonText, className }) => {
-  return <button className={className}>{buttonText}</button>
+const Button = ({ buttonText, ...props }) => {
+  return <MuiButton {...props}>{buttonText}</MuiButton>
 }
 
 export default Button

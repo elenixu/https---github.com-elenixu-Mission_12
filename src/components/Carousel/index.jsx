@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../../Styles/app.css'
 import figmaImg from '../../assets/figma_group.png'
 import reactImg from '../../assets/react_group.png'
 import jsImg from '../../assets/js_group.png'
@@ -21,6 +20,7 @@ import {
   faCircleChevronRight,
   faCircleChevronLeft,
 } from '@fortawesome/free-solid-svg-icons'
+import { Box, IconButton, Stack } from '@mui/material'
 
 const images = [
   { src: figmaImg, alt: 'Figma Pic' },
@@ -43,7 +43,7 @@ const Carousel = () => {
 
   const goToPrevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     )
   }
 
@@ -53,56 +53,113 @@ const Carousel = () => {
     return start <= end
       ? Array.from(
           { length: numImagesToShow },
-          (_, index) => (start + index) % images.length
+          (_, index) => (start + index) % images.length,
         )
       : Array.from(
           { length: numImagesToShow },
-          (_, index) => (start + index + images.length) % images.length
+          (_, index) => (start + index + images.length) % images.length,
         )
   }
 
   return (
-    <div>
-      <div className="carousel-global-container">
-        <div className="carousel">
-          <div className="carousel-buttons">
-            <FontAwesomeIcon
-              icon={faCircleChevronLeft}
-              style={{ color: '#ffffff', cursor: 'pointer' }}
-              onClick={goToPrevSlide}
+    <Box sx={{ width: '100%' }}>
+      <Box
+        sx={{
+          display: { xs: 'none', sm: 'grid' },
+          gridTemplateColumns: '48px minmax(0, 1fr) 48px',
+          alignItems: 'center',
+          gap: { sm: 1, md: 2 },
+          width: '100%',
+        }}
+      >
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          sx={{ gridColumn: 1, gridRow: 1 }}
+        >
+          <IconButton
+            aria-label="Previous skill"
+            onClick={goToPrevSlide}
+            color="inherit"
+            sx={{
+              color: 'text.primary',
+              '&:hover': { color: 'secondary.main' },
+            }}
+          >
+            <FontAwesomeIcon icon={faCircleChevronLeft} />
+          </IconButton>
+        </Stack>
+        <Stack
+          direction="row"
+          spacing={{ sm: 1.5, md: 3 }}
+          alignItems="center"
+          justifyContent="space-evenly"
+          sx={{ gridColumn: 2, gridRow: 1, minWidth: 0 }}
+        >
+          {getIndicesToDisplay().map((index) => (
+            <Box
+              component="img"
+              key={index}
+              src={images[index].src}
+              alt={images[index].alt}
+              sx={{
+                width: '100%',
+                minWidth: 0,
+                height: { sm: 110, md: 145 },
+                maxWidth: 190,
+                objectFit: 'contain',
+                opacity: index === currentIndex % images.length ? 1 : 0.58,
+                transform:
+                  index === currentIndex % images.length
+                    ? 'scale(1.08)'
+                    : 'none',
+                transition: 'all .25s ease',
+              }}
             />
-            <FontAwesomeIcon
-              icon={faCircleChevronRight}
-              style={{ color: '#ffffff', cursor: 'pointer' }}
-              onClick={goToNextSlide}
-            />
-          </div>
-          <div className="carousel-images">
-            {getIndicesToDisplay().map((index) => (
-              <img
-                key={index}
-                src={images[index].src}
-                alt={images[index].alt}
-                className={
-                  index === currentIndex % images.length ? 'active' : ''
-                }
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="carousel-global-container-mobile">
-        <div className="carousel-container-imgs-mobile">
-          <img className="img-mobile" src={figmaImgMobile} alt="Figma mobile" />
-          <img className="img-mobile" src={reactImgMobile} alt="React mobile" />
-          <img className="img-mobile" src={jsImgMobile} alt="JS mobile" />
-          <img className="img-mobile" src={reduxImgMobile} alt="Redux mobile" />
-          <img className="img-mobile" src={htmlImgMobile} alt="HTML mobile" />
-          <img className="img-mobile" src={cssImgMobile} alt="CSS mobile" />
-          <img className="img-mobile" src={sassImgMobile} alt="SaSS mobile" />
-        </div>
-      </div>
-    </div>
+          ))}
+        </Stack>
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          sx={{ gridColumn: 3, gridRow: 1 }}
+        >
+          <IconButton
+            aria-label="Next skill"
+            onClick={goToNextSlide}
+            color="inherit"
+            sx={{
+              color: 'text.primary',
+              '&:hover': { color: 'secondary.main' },
+            }}
+          >
+            <FontAwesomeIcon icon={faCircleChevronRight} />
+          </IconButton>
+        </Stack>
+      </Box>
+      <Stack
+        direction="row"
+        spacing={1.5}
+        sx={{
+          display: { xs: 'flex', sm: 'none' },
+          overflowX: 'auto',
+          py: 1,
+          '& img': {
+            width: 90,
+            height: 90,
+            objectFit: 'contain',
+            flex: '0 0 auto',
+          },
+        }}
+      >
+        <Box component="img" src={figmaImgMobile} alt="Figma" />
+        <Box component="img" src={reactImgMobile} alt="React" />
+        <Box component="img" src={jsImgMobile} alt="JavaScript" />
+        <Box component="img" src={reduxImgMobile} alt="Redux" />
+        <Box component="img" src={htmlImgMobile} alt="HTML" />
+        <Box component="img" src={cssImgMobile} alt="CSS" />
+        <Box component="img" src={sassImgMobile} alt="Sass" />
+      </Stack>
+    </Box>
   )
 }
 

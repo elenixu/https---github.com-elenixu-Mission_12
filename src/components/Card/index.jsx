@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import '../../Styles/app.css'
 import Tags from '../Tag'
 import ReactCardFlip from 'react-card-flip'
+import { Box, Button, Paper, Stack, Typography } from '@mui/material'
 
 function Card(props) {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -11,39 +11,96 @@ function Card(props) {
   }
 
   return (
-    <div>
+    <Box sx={{ width: '100%', maxWidth: 368, mx: 'auto' }}>
       <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
-        <div className="cr-container" onClick={flipCard}>
-          <div className="cr-container-text">
-            <div className="cr-title">{props.title}</div>
-            <div className="cr-title-line"></div>
-            <div className="cr-text">Technology used</div>
+        <Paper
+          elevation={8}
+          onClick={flipCard}
+          sx={{
+            minHeight: 470,
+            p: 2,
+            borderRadius: 3.5,
+            bgcolor: '#f5f5f7',
+            color: '#161619',
+            cursor: 'pointer',
+            textAlign: 'center',
+          }}
+        >
+          <Stack spacing={1} alignItems="center">
+            <Typography variant="h6" component="h3">
+              {props.title}
+            </Typography>
+            <Box sx={{ width: '100%', height: 1, bgcolor: 'rgba(0,0,0,.2)' }} />
+            <Typography variant="caption" color="text.secondary">
+              Technology used
+            </Typography>
             <Tags taglist={props.taglist} />
-            <img className="cr-picture" src={props.picture} alt="" />
-          </div>
-        </div>
-        <div className="cr-container card-back" onClick={flipCard}>
-          <div className="cr-title-back">{props.title}</div>
-          <div className="cr-text-back">{props.description}</div>
-          <div className="cr-buttons-container">
-            <button
-              className="cr-buttons"
-              onClick={() => window.open(props.gitlink)}
+            <Box
+              component="img"
+              src={props.picture}
+              alt={`${props.title} project preview`}
+              sx={{ width: '100%', height: 310, objectFit: 'contain' }}
+            />
+          </Stack>
+        </Paper>
+        <Paper
+          elevation={8}
+          onClick={flipCard}
+          sx={{
+            minHeight: 470,
+            p: 3,
+            borderRadius: 3.5,
+            bgcolor: '#171719',
+            color: 'common.white',
+            cursor: 'pointer',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Typography variant="h6" component="h3" sx={{ pt: 5, pb: 2 }}>
+            {props.title}
+          </Typography>
+          <Typography
+            sx={{ px: 1, overflowY: 'auto', maxHeight: 250, lineHeight: 1.7 }}
+          >
+            {props.description}
+          </Typography>
+          <Stack
+            direction="row"
+            spacing={1.5}
+            justifyContent="center"
+            sx={{ mt: 'auto', pt: 3, flexWrap: 'wrap' }}
+          >
+            <Button
+              variant="contained"
+              onClick={(event) => {
+                event.stopPropagation()
+                window.open(props.gitlink, '_blank', 'noopener,noreferrer')
+              }}
             >
               GitHub Link
-            </button>
+            </Button>
             {props.websitelink && (
-              <button
-                className="cr-buttons"
-                onClick={() => window.open(props.websitelink)}
+              <Button
+                variant="contained"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  window.open(
+                    props.websitelink,
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }}
               >
                 Online Website
-              </button>
+              </Button>
             )}
-          </div>
-        </div>
+          </Stack>
+        </Paper>
       </ReactCardFlip>
-    </div>
+    </Box>
   )
 }
 

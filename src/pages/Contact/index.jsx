@@ -1,24 +1,40 @@
 import React from 'react'
-import '../../Styles/app.css'
 import ContactForm from '../../components/ContactForm'
 import { useTranslation } from 'react-i18next'
+import { Box, Container, Typography } from '@mui/material'
 
 function Contact() {
-  const [t, i18n] = useTranslation('global')
+  const [t] = useTranslation('global')
   return (
-    <div className="ct-container-global">
-      <div className="ct-content">
-        <div className="ct-container-text">
-          <div id="contact" className="gl-title">
-            {t('contact-title')}
-          </div>
-          <div className="gl-text">{t('contact-message')}</div>
-        </div>
-        <div className="ct-container-form">
-          <ContactForm />
-        </div>
-      </div>
-    </div>
+    <Box
+      component="section"
+      id="contact"
+      sx={{
+        py: { xs: 7, md: 12 },
+        borderTop: '1px solid rgba(255,255,255,.07)',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Typography
+          component="h2"
+          variant="h3"
+          sx={{
+            fontSize: { xs: '2rem', md: '2.5rem' },
+            fontWeight: 400,
+            mb: 1.5,
+          }}
+        >
+          {t('contact-title')}
+        </Typography>
+        <Typography
+          color="text.secondary"
+          sx={{ maxWidth: 780, lineHeight: 1.9, mb: 4 }}
+        >
+          {t('contact-message')}
+        </Typography>
+        <ContactForm />
+      </Container>
+    </Box>
   )
 }
 

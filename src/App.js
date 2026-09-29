@@ -1,26 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-import './data/adsHouse.json';
+import React from 'react'
+import { Box, Button, Container, Typography } from '@mui/material'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'grid',
+        placeItems: 'center',
+        bgcolor: 'background.default',
+        color: 'text.primary',
+      }}
+    >
+      <Container maxWidth="sm" sx={{ textAlign: 'center' }}>
+        <Typography component="h1" variant="h3" gutterBottom>
+          Elena Gil Salazar
+        </Typography>
+        <Typography color="text.secondary" sx={{ mb: 3 }}>
+          Portfolio
+        </Typography>
+        <Button href="/" variant="contained">
+          Voir le portfolio
+        </Button>
+      </Container>
+    </Box>
+  )
 }
 
-export default App;
+export default App
