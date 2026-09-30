@@ -9,6 +9,8 @@
   "home-title": "Hola, soy Elena",
   "home-message": "Antigua realizadora de películas de animación, me reconvertí en desarrollo web. Estoy buscando empleo como desarrolladora/integradora web.",
   "home-button": "Ver mi CV",
+  "cv-back": "Volver al inicio",
+  "cv-download": "Guardar como PDF",
   "competences-title": "Mis habilidades",
   "competences-message": "Diferentes programas que utilizo",
   "works-title": "Mis trabajos",
@@ -23,7 +25,7 @@
   "contact-send-error": "No se pudo enviar el mensaje. Inténtalo de nuevo en un momento.",
   "contact-send-error-not-found": "EmailJS no encuentra el servicio o la plantilla para esta clave. Comprueba el ID del servicio, el ID de la plantilla y la clave pública en tu panel de EmailJS.",
   "contact-modal": "Gracias! Tu mensaje se ha enviado! :D",
-  "footer-message": "¡Gracias por tu visita! 🤍",
+  "footer-message": "¡Gracias por tu visita! ❤️",
   "travaux-argentbank": "Proyecto completado para mi formación como integrador web en Openclassrooms. Con la maqueta proporcionada, desarrollé el sitio web de ArgenBank con autenticación de usuario utilizando HTML, CSS, JavaScript, React, React Router, Redux, Sass, una API para la recuperación de datos y MongoDB para almacenar la información de los usuarios. El resultado final es una aplicación web segura que permite a los clientes iniciar sesión en su cuenta y ver sus transacciones bancarias. Este proyecto me permitió fortalecer mis habilidades en React y descubrir la arquitectura Redux para la gestión del estado en aplicaciones web.",
   "travaux-kasa": "Proyecto completado durante mi formación como integrador web en Openclassrooms. Desarrollé esta plataforma de alquiler de apartamentos utilizando HTML, CSS, JavaScript, junto con las bibliotecas React y React Router para crear interfaces de usuario dinámicas e interactivas. También utilicé Sass para la gestión de estilos y una API para recuperar los datos a mostrar en la aplicación. Creé un componente desplegable para las descripciones y comodidades de los apartamentos. El resultado final es un sitio web funcional donde los usuarios pueden navegar por los apartamentos y acceder a toda la información de cada uno.",
   "travaux-724": "Proyecto completado como parte de mi formación como integrador web en Openclassrooms. Depuré y corregí varios problemas con el sitio web 724 events utilizando yarn test y las herramientas de desarrollo de Chrome. Este proyecto fue un gran ejercicio para practicar la depuración de un código que ya estaba creado.",
@@ -31,5 +33,7 @@
   "travaux-nina": "Proyecto completado como parte de mi formación como integrador web en Openclassrooms. Depuré el portafolio de Nina Carducci, asegurando una mejor accesibilidad, rendimiento optimizado y SEO mejorado. Mejoré la accesibilidad al incorporar etiquetas semánticas y una navegación clara para usuarios con discapacidades visuales. La optimización del rendimiento se logró mediante la compresión de imágenes, minimización de archivos y técnicas de mejora de la velocidad de carga de páginas. Además, mejoré el SEO implementando etiquetas meta apropiadas, optimizando las URL y refinando la estructura del sitio para facilitar una mejor indexación por parte de los motores de búsqueda.",
   "travaux-ohmy": "Proyecto completado como parte de mi formación como integrador web en Openclassrooms. A partir de una maqueta proporcionada en Figma, trabajé en la integración de la versión móvil de un sitio web de food tech con animaciones CSS. Este proyecto me permitió aplicar mis habilidades en HTML y CSS mientras utilizaba Sass para la gestión del código CSS. El resultado final es un sitio web moderno que muestra los platos ofrecidos por los diferentes restaurantes. Gracias al uso de Sass, pude aumentar la productividad y mantenibilidad del código CSS, lo que me permitió organizar mejor mi código y hacerlo más manejable y limpio.",
   "travaux-print": "Proyecto completado como parte de mi formación como integrador web en Openclassrooms. Dinamicé el sitio web de impresión estática Print it agregando un carrusel en JavaScript.",
-  "travaux-sophie": "Proyecto completado como parte de mi formación como integrador web en Openclassrooms. Creé un sitio web de portafolio dinámico para el cliente Sophie Bluel con JavaScript, en el que el cliente puede recuperar y manejar sus datos a través de formularios y una página de inicio de sesión. Pude practicar mis habilidades manipulando elementos del DOM y gestionando eventos de usuario con JavaScript."
+  "travaux-sophie": "Proyecto completado como parte de mi formación como integrador web en Openclassrooms. Creé un sitio web de portafolio dinámico para el cliente Sophie Bluel con JavaScript, en el que el cliente puede recuperar y manejar sus datos a través de formularios y una página de inicio de sesión. Pude practicar mis habilidades manipulando elementos del DOM y gestionando eventos de usuario con JavaScript.",
+  "footer-like-message": "Llegaste hasta aquí, te mereces un pequeño ❤️",
+  "footer-like-thanks": "Gracias!❤️ +1 punto de dopamina"
 }

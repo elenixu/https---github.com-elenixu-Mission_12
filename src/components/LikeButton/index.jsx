@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import { Button } from '@mui/material'
+import { Button, Box, Typography } from '@mui/material'
 
 import { supabase } from '../../lib/supabaseClient'
 import { likeStorage } from './likeStorage'
+import { useTranslation } from 'react-i18next'
 
 const LikeButton = () => {
+  const [t] = useTranslation('global')
   const [count, setCount] = useState(0)
   const [hasLiked, setHasLiked] = useState(() => likeStorage.hasLiked())
   const [isLoading, setIsLoading] = useState(true)
@@ -68,52 +70,80 @@ const LikeButton = () => {
   }
 
   const HeartIcon = hasLiked ? FavoriteIcon : FavoriteBorderIcon
+  const likeMessage = hasLiked
+    ? t('footer-like-thanks')
+    : t('footer-like-message')
 
   return (
-    <Button
-      onClick={handleLike}
-      disabled={hasLiked || isLoading}
-      aria-pressed={hasLiked}
-      aria-label={`${count} likes${
-        hasLiked ? ', you liked this portfolio' : ', like this portfolio'
-      }`}
-      startIcon={
-        <HeartIcon
-          sx={{
-            color: hasLiked ? 'secondary.main' : 'inherit',
-
-            animation: isAnimating
-              ? 'portfolio-heart-pop 450ms ease-out'
-              : 'none',
-
-            '@keyframes portfolio-heart-pop': {
-              '0%': { transform: 'scale(1)' },
-              '35%': { transform: 'scale(1.45)' },
-              '65%': { transform: 'scale(.9)' },
-              '100%': { transform: 'scale(1)' },
-            },
-          }}
-        />
-      }
-      variant="outlined"
+    <Box
       sx={{
-        color: 'text.primary',
-        borderColor: 'rgba(255,255,255,.24)',
-
-        '&:hover': {
-          borderColor: 'secondary.main',
-          bgcolor: 'rgba(153,31,43,.12)',
-        },
-
-        '&.Mui-disabled': {
-          color: 'text.primary',
-          borderColor: 'rgba(255,255,255,.24)',
-          opacity: 1,
-        },
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 1,
+        textAlign: 'center',
+        width: '100%',
       }}
     >
-      {isLoading ? '...' : count}
-    </Button>
+      <Typography
+        color="text.secondary"
+        textAlign="center"
+        sx={{
+          maxWidth: 420,
+          fontSize: { xs: '.8rem', sm: '.875rem' },
+          lineHeight: 1.5,
+        }}
+      >
+        {likeMessage}
+      </Typography>
+      <Button
+        onClick={handleLike}
+        disabled={hasLiked || isLoading}
+        aria-pressed={hasLiked}
+        aria-label={`${count} likes${
+          hasLiked ? ', you liked this portfolio' : ', like this portfolio'
+        }`}
+        startIcon={
+          <HeartIcon
+            sx={{
+              color: hasLiked ? 'secondary.main' : 'inherit',
+
+              animation: isAnimating
+                ? 'portfolio-heart-pop 450ms ease-out'
+                : 'none',
+
+              '@keyframes portfolio-heart-pop': {
+                '0%': { transform: 'scale(1)' },
+                '35%': { transform: 'scale(1.45)' },
+                '65%': { transform: 'scale(.9)' },
+                '100%': { transform: 'scale(1)' },
+              },
+            }}
+          />
+        }
+        variant="outlined"
+        sx={{
+          width: 'fit-content',
+          minWidth: 0,
+          alignSelf: 'center',
+          color: 'text.primary',
+          borderColor: 'rgba(255,255,255,.24)',
+
+          '&:hover': {
+            borderColor: 'secondary.main',
+            bgcolor: 'rgba(153,31,43,.12)',
+          },
+
+          '&.Mui-disabled': {
+            color: 'text.primary',
+            borderColor: 'rgba(255,255,255,.24)',
+            opacity: 1,
+          },
+        }}
+      >
+        {isLoading ? '...' : count}
+      </Button>
+    </Box>
   )
 }
 

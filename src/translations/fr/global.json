@@ -9,6 +9,8 @@
   "home-title": "Salut, je suis Elena",
   "home-message": "Ancienne réalisatrice de films d’animation, je me suis reconvertie dans le développement web. Je recherche un emploi en tant qu’intégratice web, ou bien une alternance de niveau Bac+3.",
   "home-button": "Voir mon CV",
+  "cv-back": "Retour à l’accueil",
+  "cv-download": "Enregistrer en PDF",
   "competences-title": "Mes compétences",
   "competences-message": "Differents logiciels que j’utilise",
   "works-title": "Mes travaux",
@@ -23,7 +25,7 @@
   "contact-send-error": "L’envoi a échoué. Veuillez réessayer dans quelques instants.",
   "contact-send-error-not-found": "EmailJS ne trouve pas le service ou le modèle pour cette clé. Vérifiez l’identifiant du service, celui du modèle et la clé publique dans votre tableau de bord EmailJS.",
   "contact-modal": "Merci! Ton message a été envoyé! :D",
-  "footer-message": "Merci de votre visite 🤍",
+  "footer-message": "Merci de votre visite ❤️",
   "travaux-argentbank": "Projet réalisé pour ma formation d'intégrateur web chez Openclassrooms. j'ai développé le site web d'ArgenBank avec une authentification utilisateur utilisant HTML, CSS, JavaScript, React, React Router, Redux, Sass, une API pour la récupération des données, et MongoDB pour stocker les informations des utilisateurs. Le résultat final est une application web sécurisée permettant aux clients de se connecter à leur compte et de visualiser leurs transactions bancaires. Ce projet m'a permis de renforcer mes compétences en React et de découvrir l'architecture Redux pour la gestion d'état dans les applications web.",
   "travaux-kasa": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. J'ai intégré et développé cette plateforme en utilisant HTML, CSS, JavaScript, ainsi que les bibliothèques React et React Router pour créer des interfaces utilisateur dynamiques et interactives. J'ai également utilisé Sass pour la gestion des styles et une API pour récupérer les données à afficher sur l'application. J'ai créé un composant dropdown pour les descriptions et les équipements des appartements. Le résultat final est un site web fonctionnel, où les utilisateurs peuvent naviguer les appartements et accéder à toutes les informations.",
   "travaux-724": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. J'ai débogué et corrigé plusieurs problèmes sur le site web 724 events en utilisant yarn test et les outils de développement Chrome. Ce projet a été un excellent exercice pour pratiquer le débogage d'un code déjà créé.",
@@ -31,5 +33,7 @@
   "travaux-nina": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. J'ai débogué le portfolio de Nina Carducci, garantissant une accessibilité améliorée, des performances optimisées et un SEO amélioré. J'ai amélioré l'accessibilité en incorporant des balises sémantiques et une navigation claire pour les utilisateurs ayant des déficiences visuelles. L'optimisation des performances a été réalisée grâce à la compression d'images, la minimisation des fichiers et l'amélioration de la vitesse de chargement des pages. De plus, j'ai amélioré le référencement en implémentant des balises méta appropriées.",
   "travaux-ohmy": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. À partir d'une maquette fournie dans Figma, j'ai travaillé sur l'intégration de la version mobile d'un site web de food tech avec des animations CSS. Ce projet m'a permis d'appliquer mes compétences en HTML et CSS tout en utilisant Sass pour la gestion du code CSS. Le résultat final est un site web moderne mettant en valeur les plats proposés par les différents restaurants. Grâce à l'utilisation de Sass, j'ai pu augmenter la productivité et la maintenabilité du code CSS, me permettant ainsi de mieux organiser mon code et de le rendre plus gérable et propre.",
   "travaux-print": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. J'ai dynamisé le site web d'impression statique Print it en ajoutant un carrousel en JavaScript.",
-  "travaux-sophie": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. J'ai créé un site web de portfolio dynamique pour le client Sophie Bluel avec JavaScript, dans lequel le client peut récupérer et gérer ses données via des formulaires et une page de connexion. J'ai pu mettre en pratique mes compétences en manipulant les éléments du DOM et en gérant les événements utilisateur avec JavaScript."
+  "travaux-sophie": "Projet réalisé dans le cadre de ma formation d'intégrateur web chez Openclassrooms. J'ai créé un site web de portfolio dynamique pour le client Sophie Bluel avec JavaScript, dans lequel le client peut récupérer et gérer ses données via des formulaires et une page de connexion. J'ai pu mettre en pratique mes compétences en manipulant les éléments du DOM et en gérant les événements utilisateur avec JavaScript.",
+  "footer-like-message": "Vous êtes arrivé·e jusqu’ici, ça mérite bien un petit ❤️",
+  "footer-like-thanks": "Merci! ❤️ +1 point de dopamine"
 }

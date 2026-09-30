@@ -1,8 +1,8 @@
 export const cvData = {
   personal: {
     name: 'Elena Gil Salazar',
-    title: 'Développeuse d’applications',
-    subtitle: 'Front-end • Systèmes • Données',
+    title: 'Développeuse d’applications web',
+    subtitle: 'React • JavaScript • API',
     photo: '/images/profile.png',
     location: 'Paris',
     email: 'elegil93@gmail.com',
@@ -12,50 +12,63 @@ export const cvData = {
   },
 
   profile:
-    'Développeuse avec une expérience en conception et développement d’applications, acquise dans un environnement collaboratif et opérationnel.',
+    'Développeuse d’applications web avec 2 ans d’expérience professionnelle chez CS GROUP (Sopra Steria) sur le projet CRIMSON. Spécialisée en React, JavaScript et TypeScript, avec une expérience en intégration d’API, interfaces métier, gestion des utilisateurs et outils cartographiques.',
 
   skills: {
-    development: ['JavaScript', 'TypeScript', 'React'],
-    tools: ['Git', 'GitLab', 'Jira', 'Postman'],
+    development: [
+      'React',
+      'JavaScript',
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'React Flow',
+    ],
+
+    integration: ['API REST', 'JSON', 'Keycloak'],
+
+    tools: ['Git', 'GitLab', 'Jira', 'Postman', 'Podman', 'Figma'],
+
     analysis: [
-      'Structuration de données',
+      'Debugging',
+      'Maintenance applicative',
+      'Conception d’interfaces',
       'Résolution de problèmes',
-      'Analyse de systèmes',
     ],
   },
 
   languages: [
-    { name: 'Espagnol', level: 'Langue maternelle' },
-    { name: 'Anglais', level: 'Bilingue' },
     { name: 'Français', level: 'Courant' },
+    { name: 'Anglais', level: 'Bilingue' },
+    { name: 'Espagnol', level: 'Langue maternelle' },
   ],
 
   experience: [
     {
-      company: 'CS GROUP',
+      company: 'CS GROUP (Sopra Steria)',
       location: 'Toulouse',
-      role: 'Développeuse d’applications — environnement opérationnel',
+      role: 'Développeuse Front-End React — Projet CRIMSON',
       start: '09/2024',
       end: '09/2026',
       contract: 'Alternance',
       description: [
-        'Développement de solutions logicielles utilisées par les sapeurs-pompiers dans un contexte opérationnel.',
-        'Conception et implémentation de fonctionnalités avec React et TypeScript.',
-        'Manipulation et structuration de données liées aux interventions.',
-        'Analyse et résolution de problématiques techniques sur des systèmes existants.',
+        'Participation à la transformation web de CRIMSON, application opérationnelle destinée aux services de secours, avec React, JavaScript et TypeScript.',
+        'Conception et développement de modules métier : gestion des utilisateurs et sessions, droits via Keycloak, tableau des moyens et visualisations interactives avec React Flow.',
+        'Développement d’outils cartographiques : mesure de distances, ajout de formes et événements sur la carte opérationnelle.',
+        'Intégration de services back-end, manipulation de données, debugging et maintenance de modules existants.',
+        'Workflow professionnel avec Git/GitLab, Jira et Podman : découpage des fonctionnalités, Merge Requests, revues de code, tests et présentation des réalisations.',
       ],
     },
 
     {
-      company: 'JAM Media Ltd',
-      location: 'Irlande — Remote',
-      role: 'Animatrice de personnages',
-      start: '12/2018',
-      end: '03/2019',
-      contract: 'Freelance',
+      company: 'Studios internationaux',
+      location: 'Europe • Amérique • Remote',
+      role: 'Animation & production visuelle',
+      start: '2016',
+      end: '2021',
+      contract: 'Salariée & Freelance',
       description: [
-        'Animation de personnages pour la série télévisée "Monkeying Around".',
-        'Utilisation de Toon Boom Harmony.',
+        'Animation 2D, direction artistique et production visuelle pour des projets TV, cinéma et jeu vidéo au sein d’équipes internationales.',
+        'Collaborations : Random Encounters, Relish, Studio Shout, Bader Animation, Outstandly, JAM Media, Herald Entertainment et Kapricorn Media.',
       ],
     },
   ],
@@ -63,15 +76,22 @@ export const cvData = {
   education: [
     {
       school: 'OpenClassrooms',
-      degree: 'Développeur React',
-      level: 'BAC +3/4',
+      degree: 'Développeur d’application JavaScript React',
+      level: 'Titre RNCP Niveau 6 — Bac +3/4',
       start: '2024',
       end: '2026',
     },
     {
-      school: 'Gobelins',
-      degree: 'Conceptrice et réalisatrice de films d’animation',
-      level: 'BAC +5',
+      school: 'OpenClassrooms',
+      degree: 'Intégrateur Web',
+      level: 'Titre RNCP Niveau 5 — Bac +2',
+      start: '2023',
+      end: '2024',
+    },
+    {
+      school: 'GOBELINS Paris',
+      degree: 'Conception et réalisation de films d’animation',
+      level: 'Bac +5',
       start: '2020',
       end: '2022',
     },
