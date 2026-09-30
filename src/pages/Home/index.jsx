@@ -99,6 +99,7 @@ function Home() {
                 width: { xs: 220, sm: 280, md: 340 },
                 maxWidth: '100%',
                 height: 'auto',
+                clipPath: 'circle(47% at 50% 50%)',
                 filter: 'drop-shadow(0 24px 55px rgba(153,31,43,.25))',
               }}
             />

@@ -17,6 +17,8 @@ function Card(props) {
           elevation={8}
           onClick={flipCard}
           sx={{
+            boxSizing: 'border-box',
+            width: '100%',
             minHeight: 470,
             p: 2,
             borderRadius: 3.5,
@@ -26,7 +28,11 @@ function Card(props) {
             textAlign: 'center',
           }}
         >
-          <Stack spacing={1} alignItems="center">
+          <Stack
+            spacing={1}
+            alignItems="center"
+            sx={{ width: '100%', minWidth: 0 }}
+          >
             <Typography variant="h6" component="h3">
               {props.title}
             </Typography>
@@ -47,6 +53,8 @@ function Card(props) {
           elevation={8}
           onClick={flipCard}
           sx={{
+            boxSizing: 'border-box',
+            width: '100%',
             minHeight: 470,
             p: 3,
             borderRadius: 3.5,

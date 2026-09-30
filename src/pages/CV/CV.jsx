@@ -1,11 +1,28 @@
 import React from 'react'
-import { Box, Typography, Link, Chip, Button, Stack } from '@mui/material'
+import {
+  Box,
+  Typography,
+  Link,
+  Chip,
+  Button,
+  Stack,
+  MenuItem,
+  Select,
+} from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import DownloadIcon from '@mui/icons-material/Download'
 import { Link as RouterLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import { cvData } from './cvData'
+import { cvDataEng } from './cvDataEng'
+import { cvDataEsp } from './cvDataEsp'
+
+const cvDataByLanguage = {
+  fr: cvData,
+  eng: cvDataEng,
+  esp: cvDataEsp,
+}
 
 const burgundy = '#991f2b'
 const muted = '#6d6d6d'
@@ -128,8 +145,10 @@ const styles = {
 }
 
 const CV = () => {
-  const { personal, profile, skills, languages, experience, education } = cvData
-  const { t } = useTranslation('global')
+  const { t, i18n } = useTranslation('global')
+  const language = i18n.resolvedLanguage || i18n.language
+  const { personal, profile, skills, languages, experience, education } =
+    cvDataByLanguage[language] || cvData
 
   return (
     <Box
@@ -179,6 +198,25 @@ const CV = () => {
         >
           {t('cv-back')}
         </Button>
+        <Select
+          size="small"
+          value={language}
+          onChange={(event) => i18n.changeLanguage(event.target.value)}
+          aria-label={t('cv-language')}
+          sx={{
+            minWidth: 130,
+            color: 'common.white',
+            bgcolor: 'rgba(255,255,255,.08)',
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'rgba(255,255,255,.35)',
+            },
+            '& .MuiSvgIcon-root': { color: 'common.white' },
+          }}
+        >
+          <MenuItem value="fr">{t('button-language-fr')}</MenuItem>
+          <MenuItem value="eng">{t('button-language-eng')}</MenuItem>
+          <MenuItem value="esp">{t('button-language-esp')}</MenuItem>
+        </Select>
         <Button
           onClick={() => window.print()}
           startIcon={<DownloadIcon />}
@@ -212,7 +250,7 @@ const CV = () => {
             <Box
               component="img"
               src={personal.photo}
-              alt={`Portrait de ${personal.name}`}
+              alt={t('cv-photo-alt', { name: personal.name })}
               sx={styles.photo}
             />
           )}
@@ -226,7 +264,7 @@ const CV = () => {
             {/* CONTACT */}
             <Box sx={styles.sidebarSection}>
               <Typography component="h3" sx={styles.sidebarTitle}>
-                Contact
+                {t('cv-section-contact')}
               </Typography>
 
               <Typography sx={styles.sidebarText}>
@@ -263,7 +301,7 @@ const CV = () => {
             {/* DEVELOPMENT */}
             <Box sx={styles.sidebarSection}>
               <Typography component="h3" sx={styles.sidebarTitle}>
-                Développement
+                {t('cv-section-development')}
               </Typography>
 
               <Box sx={styles.skillList}>
@@ -281,7 +319,7 @@ const CV = () => {
             {/* TOOLS */}
             <Box sx={styles.sidebarSection}>
               <Typography component="h3" sx={styles.sidebarTitle}>
-                Outils
+                {t('cv-section-tools')}
               </Typography>
 
               <Box sx={styles.skillList}>
@@ -299,7 +337,7 @@ const CV = () => {
             {/* ANALYSIS */}
             <Box sx={styles.sidebarSection}>
               <Typography component="h3" sx={styles.sidebarTitle}>
-                Analyse
+                {t('cv-section-analysis')}
               </Typography>
 
               {skills.analysis.map((skill) => (
@@ -312,7 +350,7 @@ const CV = () => {
             {/* LANGUAGES */}
             <Box sx={styles.sidebarSection}>
               <Typography component="h3" sx={styles.sidebarTitle}>
-                Langues
+                {t('cv-section-languages')}
               </Typography>
 
               {languages.map((language) => (
@@ -335,7 +373,7 @@ const CV = () => {
             {/* PROFILE */}
             <Box component="section" sx={styles.section}>
               <Typography component="h2" sx={styles.sectionTitle}>
-                Profil
+                {t('cv-section-profile')}
               </Typography>
 
               <Typography sx={styles.profile}>{profile}</Typography>
@@ -344,7 +382,7 @@ const CV = () => {
             {/* EXPERIENCE */}
             <Box component="section" sx={styles.section}>
               <Typography component="h2" sx={styles.sectionTitle}>
-                Expériences professionnelles
+                {t('cv-section-experience')}
               </Typography>
 
               {experience.map((job, index) => (
@@ -383,7 +421,7 @@ const CV = () => {
             {/* EDUCATION */}
             <Box component="section" sx={styles.section}>
               <Typography component="h2" sx={styles.sectionTitle}>
-                Formation
+                {t('cv-section-education')}
               </Typography>
 
               {education.map((item, index) => (
