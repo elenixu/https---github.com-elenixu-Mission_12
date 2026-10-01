@@ -23,7 +23,15 @@ export const cvDataEng = {
       'CSS',
       'React Flow',
     ],
-    tools: ['Git', 'GitLab', 'Jira', 'Postman', 'Podman', 'Figma'],
+    tools: [
+      'Git',
+      'GitLab',
+      'Jira',
+      'Postman',
+      'Podman',
+      'Figma',
+      'GitHub Copilot',
+    ],
     analysis: [
       'Debugging',
       'Application maintenance',

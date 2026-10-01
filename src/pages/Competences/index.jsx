@@ -1,8 +1,7 @@
 import React from 'react'
-import Carousel from '../../components/Carousel'
 import { useTranslation } from 'react-i18next'
 import { Box, Container, Typography } from '@mui/material'
-
+import Carousel from '../../components/Carousel'
 function Competences() {
   const [t] = useTranslation('global')
   return (

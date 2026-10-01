@@ -26,7 +26,15 @@ export const cvData = {
 
     integration: ['API REST', 'JSON', 'Keycloak'],
 
-    tools: ['Git', 'GitLab', 'Jira', 'Postman', 'Podman', 'Figma'],
+    tools: [
+      'Git',
+      'GitLab',
+      'Jira',
+      'Postman',
+      'Podman',
+      'Figma',
+      'GitHub Copilot',
+    ],
 
     analysis: [
       'Debugging',

@@ -1,173 +1,184 @@
-import React, { useState } from 'react'
-import figmaImg from '../../assets/figma_group.png'
-import reactImg from '../../assets/react_group.png'
-import jsImg from '../../assets/js_group.png'
-import reduxImg from '../../assets/redux_group.png'
-import htmlImg from '../../assets/html_group.png'
-import cssImg from '../../assets/css_group.png'
-import sassImg from '../../assets/sass_group.png'
+import React, { useEffect, useRef } from 'react'
+import Flickity from 'flickity'
+import 'flickity/css/flickity.css'
 
-import figmaImgMobile from '../../assets/01figma_group.png'
-import reactImgMobile from '../../assets/02react_group.png'
-import jsImgMobile from '../../assets/03js_group.png'
-import reduxImgMobile from '../../assets/04redux_group.png'
-import htmlImgMobile from '../../assets/05html_group.png'
-import cssImgMobile from '../../assets/06css_group.png'
-import sassImgMobile from '../../assets/07sass_group.png'
+import SkillCard from '../SkillCard'
+import { skills } from '../SkillCard/skillData'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faCircleChevronRight,
-  faCircleChevronLeft,
-} from '@fortawesome/free-solid-svg-icons'
-import { Box, IconButton, Stack } from '@mui/material'
-
-const images = [
-  { src: figmaImg, alt: 'Figma Pic' },
-  { src: reactImg, alt: 'React Pic' },
-  { src: jsImg, alt: 'JS Pic' },
-  { src: reduxImg, alt: 'Redux Pic' },
-  { src: htmlImg, alt: 'HTML Pic' },
-  { src: cssImg, alt: 'CSS Pic' },
-  { src: sassImg, alt: 'SaSS Pic' },
-]
+import { Box } from '@mui/material'
 
 const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const carouselRef = useRef(null)
+  const flickityRef = useRef(null)
 
-  const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
+  useEffect(() => {
+    if (!carouselRef.current) return
 
-  const goToPrevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
-    )
-  }
+    flickityRef.current = new Flickity(carouselRef.current, {
+      // Infinite carousel
+      wrapAround: true,
+
+      // Keep selected skill in the center
+      cellAlign: 'center',
+
+      // Allow neighbouring cards to remain visible
+      contain: false,
+
+      // Flickity arrows
+      prevNextButtons: true,
+
+      // No dots underneath
+      pageDots: false,
+
+      // Mouse + touch dragging
+      draggable: true,
+
+      // Smooth movement
+      selectedAttraction: 0.025,
+      friction: 0.28,
+
+      // Accessibility
+      accessibility: true,
+    })
+
+    return () => {
+      flickityRef.current?.destroy()
+      flickityRef.current = null
+    }
+  }, [])
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box
+      sx={{
+        width: '100%',
+        py: 3,
+
+        /*
+         * Flickity viewport
+         */
+        '& .flickity-viewport': {
+          minHeight: '185px',
+          overflow: 'hidden',
+        },
+
+        /*
+         * OUTER CELL
+         *
+         * Flickity controls this element.
+         * IMPORTANT:
+         * Do NOT put transform: scale() here.
+         */
+        '& .skill-carousel-cell': {
+          width: '145px',
+
+          marginRight: {
+            xs: '14px',
+            sm: '24px',
+            md: '32px',
+          },
+
+          opacity: 0.4,
+
+          transition: `
+            opacity 450ms ease,
+            filter 450ms ease
+          `,
+        },
+
+        /*
+         * Selected Flickity cell
+         */
+        '& .skill-carousel-cell.is-selected': {
+          opacity: 1,
+
+          filter: 'drop-shadow(0 8px 18px rgba(153, 31, 43, .30))',
+
+          zIndex: 2,
+        },
+
+        /*
+         * INNER CARD
+         *
+         * We control the scaling here instead
+         * of touching Flickity's cell transform.
+         */
+        '& .skill-carousel-card': {
+          transform: 'scale(0.82)',
+
+          transition: 'transform 450ms cubic-bezier(.22,.8,.25,1)',
+
+          transformOrigin: 'center',
+        },
+
+        /*
+         * Center card becomes full size
+         */
+        '& .skill-carousel-cell.is-selected .skill-carousel-card': {
+          transform: 'scale(1)',
+        },
+
+        /*
+         * Flickity arrow buttons
+         */
+        '& .flickity-button': {
+          background: 'transparent',
+          color: '#fff',
+
+          transition: `
+            color 200ms ease,
+            transform 200ms ease
+          `,
+
+          '&:hover': {
+            background: 'transparent',
+            color: '#991f2b',
+            transform: 'scale(1.15)',
+          },
+
+          '&:focus': {
+            boxShadow: 'none',
+          },
+        },
+
+        /*
+         * Arrow icon
+         */
+        '& .flickity-button-icon': {
+          fill: 'currentColor',
+        },
+
+        /*
+         * Reduced motion accessibility
+         */
+        '@media (prefers-reduced-motion: reduce)': {
+          '& .skill-carousel-cell': {
+            transition: 'none',
+          },
+
+          '& .skill-carousel-card': {
+            transition: 'none',
+          },
+        },
+      }}
+    >
       <Box
+        ref={carouselRef}
         sx={{
-          display: { xs: 'none', sm: 'grid' },
-          gridTemplateColumns: '48px minmax(0, 1fr) 48px',
-          alignItems: 'center',
-          gap: { sm: 1, md: 2 },
           width: '100%',
         }}
       >
-        <Stack
-          alignItems="center"
-          justifyContent="center"
-          sx={{ gridColumn: 1, gridRow: 1 }}
-        >
-          <IconButton
-            aria-label="Previous skill"
-            onClick={goToPrevSlide}
-            color="inherit"
-            sx={{
-              color: 'text.primary',
-              '&:hover': { color: 'secondary.main' },
-            }}
-          >
-            <FontAwesomeIcon icon={faCircleChevronLeft} />
-          </IconButton>
-        </Stack>
-        <Box
-          role="region"
-          aria-label="Skills carousel"
-          sx={{
-            gridColumn: 2,
-            gridRow: 1,
-            position: 'relative',
-            width: '100%',
-            height: { sm: 130, md: 170 },
-            overflow: 'hidden',
-            minWidth: 0,
-            maskImage:
-              'linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)',
-          }}
-        >
-          {images.map((image, index) => {
-            const half = Math.floor(images.length / 2)
-            const offset =
-              ((index - currentIndex + images.length + half) % images.length) -
-              half
-            const isVisible = Math.abs(offset) <= 2
-            const isActive = index === currentIndex
-
-            return (
-              <Box
-                component="img"
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                aria-hidden={!isVisible}
-                sx={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: `calc(50% + ${offset * 22}%)`,
-                  width: '20%',
-                  height: { sm: 105, md: 140 },
-                  maxWidth: 190,
-                  objectFit: 'contain',
-                  opacity: isVisible ? (isActive ? 1 : 0.58) : 0,
-                  transform: `translate(-50%, -50%) scale(${isActive ? 1.15 : 0.88})`,
-                  filter: isActive
-                    ? 'drop-shadow(0 8px 16px rgba(153,31,43,.35))'
-                    : 'none',
-                  zIndex: isActive ? 1 : 0,
-                  transition:
-                    'left 520ms cubic-bezier(.22,.8,.25,1), transform 520ms cubic-bezier(.22,.8,.25,1), opacity 350ms ease, filter 350ms ease',
-                  '@media (prefers-reduced-motion: reduce)': {
-                    transition: 'none',
-                  },
-                }}
+        {skills.map((skill) => (
+          <Box key={skill.name} className="skill-carousel-cell">
+            <Box className="skill-carousel-card">
+              <SkillCard
+                name={skill.name}
+                icon={skill.icon}
+                level={skill.level}
               />
-            )
-          })}
-        </Box>
-        <Stack
-          alignItems="center"
-          justifyContent="center"
-          sx={{ gridColumn: 3, gridRow: 1 }}
-        >
-          <IconButton
-            aria-label="Next skill"
-            onClick={goToNextSlide}
-            color="inherit"
-            sx={{
-              color: 'text.primary',
-              '&:hover': { color: 'secondary.main' },
-            }}
-          >
-            <FontAwesomeIcon icon={faCircleChevronRight} />
-          </IconButton>
-        </Stack>
+            </Box>
+          </Box>
+        ))}
       </Box>
-      <Stack
-        direction="row"
-        spacing={1.5}
-        sx={{
-          display: { xs: 'flex', sm: 'none' },
-          overflowX: 'auto',
-          py: 1,
-          '& img': {
-            width: 90,
-            height: 90,
-            objectFit: 'contain',
-            flex: '0 0 auto',
-          },
-        }}
-      >
-        <Box component="img" src={figmaImgMobile} alt="Figma" />
-        <Box component="img" src={reactImgMobile} alt="React" />
-        <Box component="img" src={jsImgMobile} alt="JavaScript" />
-        <Box component="img" src={reduxImgMobile} alt="Redux" />
-        <Box component="img" src={htmlImgMobile} alt="HTML" />
-        <Box component="img" src={cssImgMobile} alt="CSS" />
-        <Box component="img" src={sassImgMobile} alt="Sass" />
-      </Stack>
     </Box>
   )
 }

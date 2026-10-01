@@ -2009,38 +2009,38 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@supabase/auth-js@2.109.0":
-  version "2.109.0"
-  resolved "https://registry.npmjs.org/@supabase/auth-js/-/auth-js-2.109.0.tgz"
-  integrity sha512-krf61vksi92kEUYtNH70GnIMOoQqLBAKG2e3Aha4e/0uJA6i1OWCxL7WUGHo6c0Vu/w96Y1DdnkYz0NOg0kYog==
+"@supabase/auth-js@2.117.2":
+  version "2.117.2"
+  resolved "https://registry.npmjs.org/@supabase/auth-js/-/auth-js-2.117.2.tgz"
+  integrity sha512-Z3WnGwrphYZubrLbxp5Iv0tLA9A5GhvKzJ/ZXglxqwd2QEH2R4dXRltjVJ8sIn4xEW2BSFIGT0yALVJIgZeDYw==
   dependencies:
     tslib "2.8.1"
 
-"@supabase/functions-js@2.109.0":
-  version "2.109.0"
-  resolved "https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.109.0.tgz"
-  integrity sha512-IiwAspZrVrBRYQoFgSJvkcA9iJvTCw8nHOdvlKARDushlw/x1YY3YJYtwwgZFtl7utUbTiZ5SwohXPNgnpZM+g==
+"@supabase/functions-js@2.117.2":
+  version "2.117.2"
+  resolved "https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.117.2.tgz"
+  integrity sha512-6DT4ZIjmZxa9ANKaBIrjc86AyKrX8M376ynvNeOBBVad3eP7x3UHqWfDR2ynFkHGzCuOpr1A+kObmnahxuwuog==
   dependencies:
     tslib "2.8.1"
 
-"@supabase/phoenix@0.4.4":
-  version "0.4.4"
-  resolved "https://registry.npmjs.org/@supabase/phoenix/-/phoenix-0.4.4.tgz"
-  integrity sha512-Gt0pqoXuIqX/8dvG0OKp/wMCobXNH3klNbUPBNyOfN0YA1IswrM3HyWFMOPk1Jy+BRaIyDPcFx4jLBwHNmlyfQ==
+"@supabase/phoenix@0.4.5":
+  version "0.4.5"
+  resolved "https://registry.npmjs.org/@supabase/phoenix/-/phoenix-0.4.5.tgz"
+  integrity sha512-aAn9H9ovVyeApKy11OWOrrOGq8DV68yWeH4ud2lN9fzn4aO8Zb5GLL9m1pUg9nLqIcT+ZDfAcsZe0E/nqdv2lw==
 
-"@supabase/postgrest-js@2.109.0":
-  version "2.109.0"
-  resolved "https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-2.109.0.tgz"
-  integrity sha512-Xk4gzuzyrGIPWCUuJolDQS/9zdFZDEXRhNsVeOHEKwFr+vpNU0himsHtLOhSEYlyPqwmeY8LUCKL6bLsDp0ScA==
+"@supabase/postgrest-js@2.117.2":
+  version "2.117.2"
+  resolved "https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-2.117.2.tgz"
+  integrity sha512-V1Qhn+M8xzJqCasOxHZ2KG19Fj39PxU7weEAmOK65/KTsWCRXboB4hcQwFvxRvM7ZikeP9IZWNvQkfjvSxzYFw==
   dependencies:
     tslib "2.8.1"
 
-"@supabase/realtime-js@2.109.0":
-  version "2.109.0"
-  resolved "https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.109.0.tgz"
-  integrity sha512-q9tjGUgWLNhfLz6HeYE7yl6FG9WEsnr6bFmmLpn2Nakxp3Z36pqI4xu0xns5/n8Xtq10HVcy9CRxOxgvviCM4Q==
+"@supabase/realtime-js@2.117.2":
+  version "2.117.2"
+  resolved "https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.117.2.tgz"
+  integrity sha512-lYXSAIg3eAKA58riUED6Vb+TCzF8jtx18uOoiCaVJ7ZMre6FWBpwB1MPeW+B6vykJT/hPdiuqwcSB7ILMS21ew==
   dependencies:
-    "@supabase/phoenix" "0.4.4"
+    "@supabase/phoenix" "0.4.5"
     tslib "2.8.1"
 
 "@supabase/ssr@^0.12.7":
@@ -2050,24 +2050,24 @@
   dependencies:
     cookie "^1.0.2"
 
-"@supabase/storage-js@2.109.0":
-  version "2.109.0"
-  resolved "https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.109.0.tgz"
-  integrity sha512-j119SdEuwrOPGqiPjshpfovrQPFqeATKg990jNV88Ie+SEufznzVD2mL5kQvly+z2oVBeZn+pweU0QN/OYLmJw==
+"@supabase/storage-js@2.117.2":
+  version "2.117.2"
+  resolved "https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.117.2.tgz"
+  integrity sha512-8gAJoVaxZa/War2kFRfJMxGk4M190Q7lJ70BofwGlRxU/u9pIodd6XyTvmXkxOKXWuIYtkDaYPZrIAUt1T/7FQ==
   dependencies:
     iceberg-js "^0.8.1"
     tslib "2.8.1"
 
 "@supabase/supabase-js@^2.109.0", "@supabase/supabase-js@^2.114.0":
-  version "2.109.0"
-  resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.109.0.tgz"
-  integrity sha512-eNpUGegTT3hhoTK9j6aLViVjybYtdq6Ishb4BkVLi5tT58S1D80n7dmALMoBWkbrYG4uQv30c8iAB6nZylX0Fg==
+  version "2.117.2"
+  resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.117.2.tgz"
+  integrity sha512-eSG2VKnHR+Clp1PmidZ1/weJ8PJwoybjva3L2GgKqFG4YDS1Iqmc61psKGZP5xw6OMT2O7ZorPR42PY6q1BOXg==
   dependencies:
-    "@supabase/auth-js" "2.109.0"
-    "@supabase/functions-js" "2.109.0"
-    "@supabase/postgrest-js" "2.109.0"
-    "@supabase/realtime-js" "2.109.0"
-    "@supabase/storage-js" "2.109.0"
+    "@supabase/auth-js" "2.117.2"
+    "@supabase/functions-js" "2.117.2"
+    "@supabase/postgrest-js" "2.117.2"
+    "@supabase/realtime-js" "2.117.2"
+    "@supabase/storage-js" "2.117.2"
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
@@ -4870,6 +4870,11 @@ etag@~1.8.1:
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
+ev-emitter@^2.0.0, ev-emitter@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/ev-emitter/-/ev-emitter-2.1.2.tgz"
+  integrity sha512-jQ5Ql18hdCQ4qS+RCrbLfz1n+Pags27q5TwMKvZyhp5hh2UULUYZUy1keqj6k6SYsdqIYjnmz7xyyEY0V67B8Q==
+
 eventemitter3@^4.0.0:
   version "4.0.7"
   resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
@@ -5094,6 +5099,11 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
+fizzy-ui-utils@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/fizzy-ui-utils/-/fizzy-ui-utils-3.0.0.tgz"
+  integrity sha512-uJj38QFQiJ/KCio5tiZhwAjIbTXSIgzBCKdKVbaYfLS053F6z23Nb0o1ZoO9gnxOQWN7BCc35jsvrCtAq3gY9g==
+
 flat-cache@^3.0.4:
   version "3.2.0"
   resolved "https://registry.npmjs.org/flat-cache/-/flat-cache-3.2.0.tgz"
@@ -5107,6 +5117,17 @@ flatted@^3.2.9:
   version "3.2.9"
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.9.tgz"
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
+
+flickity@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/flickity/-/flickity-3.0.0.tgz"
+  integrity sha512-Xw4znhglA2LVSmka0yKmzb4+fLwXm13TuKmdG1HbUoZZL95J1ZMr4hAA3w69s+Z6q/c6CyBDM25JVwMqgF3rOg==
+  dependencies:
+    ev-emitter "^2.1.2"
+    fizzy-ui-utils "^3.0.0"
+    get-size "^3.0.0"
+    imagesloaded "^5.0.0"
+    unidragger "^3.0.0"
 
 follow-redirects@^1.0.0:
   version "1.15.3"
@@ -5241,6 +5262,11 @@ get-package-type@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/get-package-type/-/get-package-type-0.1.0.tgz"
   integrity sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==
+
+get-size@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/get-size/-/get-size-3.0.0.tgz"
+  integrity sha512-Y8aiXLq4leR7807UY0yuKEwif5s3kbVp1nTv+i4jBeoUzByTLKkLWu/HorS6/pB+7gsB0o7OTogC8AoOOeT0Hw==
 
 get-stream@^6.0.0:
   version "6.0.1"
@@ -5637,6 +5663,13 @@ ignore@^5.2.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.0.tgz"
   integrity sha512-g7dmpshy+gD7mh88OC9NwSGTKoc3kyLAZQRU1mt53Aw/vnvfXnbC+F/7F7QoYVKbV+KNvJx8wArewKy1vXMtlg==
+
+imagesloaded@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/imagesloaded/-/imagesloaded-5.0.0.tgz"
+  integrity sha512-/0JGSubc1MTCoDKVmonLHgbifBWHdyLkun+R/151E1c5n79hiSxcd7cB7mPXFgojYu8xnRZv7GYxzKoxW8BetQ==
+  dependencies:
+    ev-emitter "^2.1.2"
 
 immer@^9.0.7:
   version "9.0.21"
@@ -8980,6 +9013,11 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
+simple-icons@^16.33.0:
+  version "16.33.0"
+  resolved "https://registry.npmjs.org/simple-icons/-/simple-icons-16.33.0.tgz"
+  integrity sha512-z14u6A8ngAg9mgERRsNO8YkjIMefehIpBk7A8Dz3Gd91945qFP19MLPSHgV4z8P5u/MRYd5e07OTzaDoB4d6qA==
+
 sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz"
@@ -9745,6 +9783,13 @@ unicode-property-aliases-ecmascript@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-2.1.0.tgz"
   integrity sha512-6t3foTQI9qne+OZoVQB/8x8rk2k1eVy1gRXhV3oFQ5T6R1dqQ1xtin3XqSlx3+ATBkliTaR/hHyJBm+LVPNM8w==
+
+unidragger@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/unidragger/-/unidragger-3.0.1.tgz"
+  integrity sha512-RngbGSwBFmqGBWjkaH+yB677uzR95blSQyxq6hYbrQCejH3Mx1nm8DVOuh3M9k2fQyTstWUG5qlgCnNqV/9jVw==
+  dependencies:
+    ev-emitter "^2.0.0"
 
 unique-string@^2.0.0:
   version "2.0.0"
