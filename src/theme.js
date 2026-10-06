@@ -16,7 +16,7 @@ const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        body: { minWidth: 320, backgroundColor: '#0c0c0d' },
+        body: { backgroundColor: '#0c0c0d' },
         '*, *::before, *::after': { boxSizing: 'border-box' },
         html: { scrollBehavior: 'smooth' },
       },

@@ -21,13 +21,20 @@ function Competences() {
             fontSize: { xs: '2rem', md: '2.5rem' },
             fontWeight: 400,
             mb: 1.5,
+            textAlign: { xs: 'center', md: 'left' },
           }}
         >
           {t('competences-title')}
         </Typography>
         <Typography
           color="text.secondary"
-          sx={{ maxWidth: 780, lineHeight: 1.9, mb: 4 }}
+          sx={{
+            maxWidth: 780,
+            lineHeight: 1.9,
+            mb: 4,
+            mx: { xs: 'auto', md: 0 },
+            textAlign: { xs: 'center', md: 'left' },
+          }}
         >
           {t('competences-message')}
         </Typography>
