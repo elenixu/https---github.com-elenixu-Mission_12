@@ -1,69 +1,77 @@
 export const cvData = {
   personal: {
     name: 'Elena Gil Salazar',
-    title: 'Développeuse d’applications web',
-    subtitle: 'React • JavaScript • API',
+    title: 'Développeuse Front-End React / TypeScript',
+    subtitle: 'React • TypeScript • API REST • Interfaces métier',
     photo: '/images/profile.png',
     location: 'Paris',
     email: 'elegil93@gmail.com',
     phone: '+33 7 45 51 23 96',
     github: 'https://github.com/elenixu',
     linkedin: 'https://www.linkedin.com/in/elenagilsalazar/',
+    portfolio: 'https://https-github-com-elenixu-mission-12.vercel.app/',
   },
 
   profile:
-    'Développeuse d’applications web avec 2 ans d’expérience professionnelle chez CS GROUP (Sopra Steria) sur le projet CRIMSON. Spécialisée en React, JavaScript et TypeScript, avec une expérience en intégration d’API, interfaces métier, gestion des utilisateurs et outils cartographiques.',
+    'Développeuse Front-End avec 2 ans d’expérience professionnelle chez CS GROUP (Sopra Steria) sur CRIMSON TACTIC, plateforme opérationnelle de gestion de crise utilisée par les sapeurs-pompiers et services de sécurité civile. Spécialisée en React et TypeScript, avec une expérience en interfaces métier, API REST, gestion des accès et outils cartographiques.',
 
   skills: {
     development: [
       'React',
-      'JavaScript',
       'TypeScript',
+      'JavaScript',
+      'React Flow',
       'HTML',
       'CSS',
-      'React Flow',
     ],
 
-    integration: ['API REST', 'JSON', 'Keycloak'],
-
     tools: [
+      'API REST',
+      'JSON',
+      'Keycloak',
       'Git',
       'GitLab',
+      'Merge Requests',
+      'Code Review',
       'Jira',
       'Postman',
       'Podman',
       'Figma',
-      'GitHub Copilot',
     ],
 
-    analysis: [
-      'Debugging',
-      'Maintenance applicative',
-      'Conception d’interfaces',
-      'Résolution de problèmes',
-    ],
+    analysis: ['Conception d’interfaces'],
   },
 
   languages: [
-    { name: 'Français', level: 'Courant' },
-    { name: 'Anglais', level: 'Bilingue' },
-    { name: 'Espagnol', level: 'Langue maternelle' },
+    {
+      name: 'Français',
+      level: 'Courant',
+    },
+    {
+      name: 'Anglais',
+      level: 'Bilingue',
+    },
+    {
+      name: 'Espagnol',
+      level: 'Langue maternelle',
+    },
   ],
 
   experience: [
     {
       company: 'CS GROUP (Sopra Steria)',
       location: 'Toulouse',
-      role: 'Développeuse Front-End React — Projet CRIMSON',
+      role: 'Développeuse Front-End React — CRIMSON TACTIC',
       start: '09/2024',
       end: '09/2026',
       contract: 'Alternance',
+      projectUrl: 'https://www.crimson.eu/fr/solutions/crimson-tactic',
       description: [
-        'Participation à la transformation web de CRIMSON, application opérationnelle destinée aux services de secours, avec React, JavaScript et TypeScript.',
-        'Conception et développement de modules métier : gestion des utilisateurs et sessions, droits via Keycloak, tableau des moyens et visualisations interactives avec React Flow.',
-        'Développement d’outils cartographiques : mesure de distances, ajout de formes et événements sur la carte opérationnelle.',
-        'Intégration de services back-end, manipulation de données, debugging et maintenance de modules existants.',
-        'Workflow professionnel avec Git/GitLab, Jira et Podman : découpage des fonctionnalités, Merge Requests, revues de code, tests et présentation des réalisations.',
+        'Développement Front-End de CRIMSON TACTIC, plateforme opérationnelle de gestion de crise utilisée par les sapeurs-pompiers et services de sécurité civile, avec React et TypeScript.',
+        'Conception de modules métier : gestion des utilisateurs et sessions, droits d’accès via Keycloak et gestion des moyens opérationnels.',
+        'Création de visualisations interactives avec React Flow et développement d’outils cartographiques : mesure de distances, ajout de formes et gestion d’événements opérationnels.',
+        'Intégration d’API REST, manipulation de données, debugging et maintenance corrective et évolutive de modules existants.',
+        'Travail en équipe avec Git/GitLab, Merge Requests, revues de code, Jira, Podman, tests et démonstrations des fonctionnalités réalisées.',
       ],
     },
 
@@ -85,7 +93,7 @@ export const cvData = {
     {
       school: 'OpenClassrooms',
       degree: 'Développeur d’application JavaScript React',
-      level: 'Titre RNCP Niveau 6 — Bac +3/4',
+      level: 'Titre RNCP Niveau 6 — Bac +4',
       start: '2024',
       end: '2026',
     },

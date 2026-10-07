@@ -1,77 +1,83 @@
 export const cvDataEsp = {
   personal: {
     name: 'Elena Gil Salazar',
-    title: 'Desarrolladora de aplicaciones web',
-    subtitle: 'React • JavaScript • TypeScript',
+    title: 'Desarrolladora Front-End React / TypeScript',
+    subtitle: 'React • TypeScript • APIs REST • Interfaces de negocio',
     photo: '/images/profile.png',
-    location: 'París, Francia',
+    location: 'París',
     email: 'elegil93@gmail.com',
     phone: '+33 7 45 51 23 96',
     github: 'https://github.com/elenixu',
     linkedin: 'https://www.linkedin.com/in/elenagilsalazar/',
+    portfolio: 'https://https-github-com-elenixu-mission-12.vercel.app/',
   },
 
   profile:
-    'Desarrolladora de aplicaciones web con 2 años de experiencia profesional en CS GROUP (Sopra Steria), en el proyecto CRIMSON. Especializada en React, JavaScript y TypeScript, con experiencia en integración de API, desarrollo de interfaces de negocio, gestión de usuarios y herramientas cartográficas.',
+    'Desarrolladora Front-End con 2 años de experiencia profesional en CS GROUP (Sopra Steria) en CRIMSON TACTIC, una plataforma operativa de gestión de crisis utilizada por bomberos y servicios de seguridad civil. Especializada en React y TypeScript, con experiencia en interfaces de negocio, APIs REST, gestión de accesos y herramientas cartográficas.',
 
   skills: {
-    development: [
-      'React',
-      'JavaScript',
-      'TypeScript',
-      'HTML',
-      'CSS',
-      'React Flow',
-    ],
+    development: ['React', 'TypeScript', 'JavaScript', 'React Flow', 'HTML', 'CSS'],
+
     tools: [
+      'API REST',
+      'JSON',
+      'Keycloak',
       'Git',
       'GitLab',
+      'Merge Requests',
+      'Code Review',
       'Jira',
       'Postman',
       'Podman',
       'Figma',
-      'GitHub Copilot',
     ],
-    analysis: [
-      'Depuración',
-      'Mantenimiento de aplicaciones',
-      'Diseño de interfaces',
-      'Resolución de problemas',
-    ],
+
+    analysis: ['Diseño de interfaces'],
   },
 
   languages: [
-    { name: 'Francés', level: 'Fluido' },
-    { name: 'Inglés', level: 'Bilingüe' },
-    { name: 'Español', level: 'Lengua materna' },
+    {
+      name: 'Francés',
+      level: 'Fluido',
+    },
+    {
+      name: 'Inglés',
+      level: 'Bilingüe',
+    },
+    {
+      name: 'Español',
+      level: 'Nativo',
+    },
   ],
 
   experience: [
     {
       company: 'CS GROUP (Sopra Steria)',
-      location: 'Toulouse, Francia',
-      role: 'Desarrolladora Front-End React — Proyecto CRIMSON',
+      location: 'Toulouse',
+      role: 'Desarrolladora Front-End React — CRIMSON TACTIC',
       start: '09/2024',
       end: '09/2026',
-      contract: 'Contrato de formación en alternancia',
+      contract: 'Formación dual',
+      projectUrl: 'https://www.crimson.eu/fr/solutions/crimson-tactic',
       description: [
-        'Participación en la transformación web de CRIMSON, una aplicación operativa destinada a los servicios de emergencia, con React, JavaScript y TypeScript.',
-        'Diseño y desarrollo de módulos de negocio: gestión de usuarios y sesiones, permisos mediante Keycloak, panel de recursos y visualizaciones interactivas con React Flow.',
-        'Desarrollo de herramientas cartográficas para medir distancias y añadir formas y eventos al mapa operativo.',
-        'Integración de servicios de back-end, tratamiento de datos, depuración y mantenimiento de módulos existentes.',
-        'Trabajo con un flujo profesional basado en Git/GitLab, Jira y Podman: desglose de funcionalidades, merge requests, revisiones de código, pruebas y presentación de resultados.',
+        'Desarrollo Front-End de CRIMSON TACTIC, plataforma operativa de gestión de crisis utilizada por bomberos y servicios de seguridad civil, con React y TypeScript.',
+        'Diseño de módulos de negocio: gestión de usuarios y sesiones, derechos de acceso mediante Keycloak y gestión de recursos operativos.',
+        'Creación de visualizaciones interactivas con React Flow y desarrollo de herramientas cartográficas: medición de distancias, adición de formas y gestión de eventos operativos.',
+        'Integración de APIs REST, manipulación de datos, depuración y mantenimiento correctivo y evolutivo de módulos existentes.',
+        'Trabajo en equipo con Git/GitLab, merge requests, revisiones de código, Jira, Podman, pruebas y demostraciones de funcionalidades realizadas.',
       ],
     },
+
     {
       company: 'Estudios internacionales',
-      location: 'Europa • América • Remoto',
+      location: 'Europa • América • Remote',
       role: 'Animación y producción visual',
       start: '2016',
       end: '2021',
-      contract: 'Asalariada y autónoma',
+      contract: 'Empleado y freelance',
       description: [
-        'Animación 2D, dirección artística y producción visual para proyectos de televisión, cine y videojuegos en equipos internacionales.',
-        'Colaboraciones: Random Encounters, Relish, Studio Shout, Bader Animation, Outstandly, JAM Media, Herald Entertainment y Kapricorn Media.',
+        'Animación 2D, dirección artística y producción visual para proyectos de TV, cine y videojuegos dentro de equipos internacionales.',
+        'Colaboraciones con Random Encounters, Relish, Studio Shout, Bader Animation, Outstandly, JAM Media, Herald Entertainment y Kapricorn Media.',
       ],
     },
   ],
@@ -79,20 +85,20 @@ export const cvDataEsp = {
   education: [
     {
       school: 'OpenClassrooms',
-      degree: 'Desarrolladora de aplicaciones JavaScript React',
-      level: 'Título RNCP de nivel 6 — equivalente a Bac +3/4',
+      degree: 'Desarrollador de aplicaciones JavaScript React',
+      level: 'Título RNCP Nivel 6 — Bac +4',
       start: '2024',
       end: '2026',
     },
     {
       school: 'OpenClassrooms',
-      degree: 'Integración web',
-      level: 'Título RNCP de nivel 5 — equivalente a Bac +2',
+      degree: 'Integrador Web',
+      level: 'Título RNCP Nivel 5 — Bac +2',
       start: '2023',
       end: '2024',
     },
     {
-      school: 'GOBELINS Paris',
+      school: 'GOBELINS París',
       degree: 'Diseño y realización de películas de animación',
       level: 'Bac +5',
       start: '2020',

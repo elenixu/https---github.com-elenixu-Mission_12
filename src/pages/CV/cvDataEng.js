@@ -1,77 +1,83 @@
 export const cvDataEng = {
   personal: {
     name: 'Elena Gil Salazar',
-    title: 'Web Application Developer',
-    subtitle: 'React • JavaScript • TypeScript',
+    title: 'Front-End React / TypeScript Developer',
+    subtitle: 'React • TypeScript • REST APIs • Business interfaces',
     photo: '/images/profile.png',
-    location: 'Paris, France',
+    location: 'Paris',
     email: 'elegil93@gmail.com',
     phone: '+33 7 45 51 23 96',
     github: 'https://github.com/elenixu',
     linkedin: 'https://www.linkedin.com/in/elenagilsalazar/',
+    portfolio: 'https://https-github-com-elenixu-mission-12.vercel.app/',
   },
 
   profile:
-    'Web application developer with 2 years of professional experience at CS GROUP (Sopra Steria) on the CRIMSON project. Specializing in React, JavaScript, and TypeScript, with experience integrating APIs, developing business interfaces, managing users, and building mapping tools.',
+    'Front-End Developer with 2 years of professional experience at CS GROUP (Sopra Steria) on CRIMSON TACTIC, an operational crisis management platform used by firefighters and civil security services. Specialized in React and TypeScript, with experience in business interfaces, REST APIs, access management, and mapping tools.',
 
   skills: {
-    development: [
-      'React',
-      'JavaScript',
-      'TypeScript',
-      'HTML',
-      'CSS',
-      'React Flow',
-    ],
+    development: ['React', 'TypeScript', 'JavaScript', 'React Flow', 'HTML', 'CSS'],
+
     tools: [
+      'REST API',
+      'JSON',
+      'Keycloak',
       'Git',
       'GitLab',
+      'Merge Requests',
+      'Code Review',
       'Jira',
       'Postman',
       'Podman',
       'Figma',
-      'GitHub Copilot',
     ],
-    analysis: [
-      'Debugging',
-      'Application maintenance',
-      'Interface design',
-      'Problem-solving',
-    ],
+
+    analysis: ['Interface design'],
   },
 
   languages: [
-    { name: 'French', level: 'Fluent' },
-    { name: 'English', level: 'Bilingual' },
-    { name: 'Spanish', level: 'Native language' },
+    {
+      name: 'French',
+      level: 'Fluent',
+    },
+    {
+      name: 'English',
+      level: 'Bilingual',
+    },
+    {
+      name: 'Spanish',
+      level: 'Native',
+    },
   ],
 
   experience: [
     {
       company: 'CS GROUP (Sopra Steria)',
-      location: 'Toulouse, France',
-      role: 'React Front-End Developer — CRIMSON Project',
+      location: 'Toulouse',
+      role: 'Front-End React Developer — CRIMSON TACTIC',
       start: '09/2024',
       end: '09/2026',
       contract: 'Apprenticeship',
+      projectUrl: 'https://www.crimson.eu/fr/solutions/crimson-tactic',
       description: [
-        'Contributed to the web transformation of CRIMSON, an operational application for emergency services, using React, JavaScript, and TypeScript.',
-        'Designed and developed business modules for user and session management, Keycloak permissions, resource dashboards, and interactive visualizations with React Flow.',
-        'Developed mapping tools for measuring distances and adding shapes and events to the operational map.',
-        'Integrated back-end services, processed data, debugged the application, and maintained existing modules.',
-        'Worked with a professional Git/GitLab, Jira, and Podman workflow, including feature breakdown, merge requests, code reviews, testing, and demonstrations.',
+        'Front-End development of CRIMSON TACTIC, an operational crisis management platform used by firefighters and civil security services, using React and TypeScript.',
+        'Design of business modules: user and session management, access rights via Keycloak, and operational resource management.',
+        'Creation of interactive visualizations with React Flow and development of mapping tools: distance measurement, shape creation, and operational event management.',
+        'REST API integration, data manipulation, debugging, and corrective and evolutive maintenance of existing modules.',
+        'Collaboration within a team using Git/GitLab, merge requests, code reviews, Jira, Podman, tests, and feature demonstrations.',
       ],
     },
+
     {
       company: 'International studios',
-      location: 'Europe • Americas • Remote',
-      role: 'Animation & Visual Production',
+      location: 'Europe • America • Remote',
+      role: 'Animation & visual production',
       start: '2016',
       end: '2021',
       contract: 'Employee & Freelance',
       description: [
-        'Created 2D animation, art direction, and visual production for TV, film, and video game projects with international teams.',
-        'Collaborated with Random Encounters, Relish, Studio Shout, Bader Animation, Outstandly, JAM Media, Herald Entertainment, and Kapricorn Media.',
+        '2D animation, art direction, and visual production for TV, film, and video game projects in international teams.',
+        'Collaborations with Random Encounters, Relish, Studio Shout, Bader Animation, Outstandly, JAM Media, Herald Entertainment, and Kapricorn Media.',
       ],
     },
   ],
@@ -80,20 +86,20 @@ export const cvDataEng = {
     {
       school: 'OpenClassrooms',
       degree: 'JavaScript React Application Developer',
-      level: 'RNCP Level 6 qualification — equivalent to Bac +3/4',
+      level: 'RNCP Title Level 6 — Bac +4',
       start: '2024',
       end: '2026',
     },
     {
       school: 'OpenClassrooms',
       degree: 'Web Integrator',
-      level: 'RNCP Level 5 qualification — equivalent to Bac +2',
+      level: 'RNCP Title Level 5 — Bac +2',
       start: '2023',
       end: '2024',
     },
     {
       school: 'GOBELINS Paris',
-      degree: 'Animation Film Design and Production',
+      degree: 'Animation film design and production',
       level: 'Bac +5',
       start: '2020',
       end: '2022',
